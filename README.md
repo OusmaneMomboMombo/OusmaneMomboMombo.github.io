@@ -1,72 +1,54 @@
-# Ousmane Mombo Mombo - Data Scientist
+# 🚀 Ousmane Mombo Mombo - Data Scientist & AI Engineer
 
-[![Website](https://img.shields.io/badge/Website-OusmaneMomboMombo.github.io-blue?style=flat-square&logo=google-chrome)](https://ousmanemombomombo.github.io)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Ousmane_Mombo_Mombo-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/ousmane-mombo-mombo/)
-[![GitHub](https://img.shields.io/badge/GitHub-OusmaneMomboMombo-black?style=flat-square&logo=github)](https://github.com/OusmaneMomboMombo)
+[![Website](https://img.shields.io/badge/website-visit-blue)](https://ousmanemombomombo.github.io)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-connect-blue)](https://www.linkedin.com/in/ousmane-mombo-mombo/)
+[![GitHub](https://img.shields.io/badge/GitHub-follow-lightgrey)](https://github.com/OusmaneMomboMombo)
 
-👋 Hello! I'm a 4th-year student at **aivancity School for Technology, Business and Society**, pursuing a Higher Education Diploma in **Artificial Intelligence and Data Science**. Currently seeking a **work-study opportunity** (3 weeks in company / 1 week at school) starting July 2025.
+3rd-year student at **Aivancity School for Technology, Business & Society** pursuing an Advanced Degree in Artificial Intelligence and Data Science. Passionate about building ethical AI solutions that combine technical excellence with sustainable impact.
 
-⚡ **Passionate about**: Machine Learning | Data Analysis | AI Ethics | Automating Everything
+🔍 **Currently seeking** a 3-month internship (July-September 2025) in Data Science/AI
 
-🌍 **Based in**: Cachan, Île-de-France, France
+## 🌟 Featured Skills
+**▸ Advanced Techniques:**  
+Machine Learning • Deep Learning • NLP • Time Series Analysis • Web Scraping • Data Automation
 
-## 🔥 Featured Projects
+**▸ Languages & Tools:**  
+Python • SQL • R • TensorFlow • PyTorch • Tableau • Power BI
 
-### Data Science & Machine Learning
+**▸ Soft Skills:**  
+Analytical Thinking • Problem Solving • Team Collaboration • AI Ethics
+
+## 🏆 Highlighted Projects
+
+### 💼 Professional Experiences
+- **Data Scientist Intern** @ Energie Pro Export  
+  Developed predictive inventory models reducing costs by 10% • Built interactive dashboards
+- **AI Consultant Intern** @ Alliance Experts  
+  Designed AI solutions to optimize automotive claims processing
+
+### 🎓 Academic Projects (School-Enterprise Partnerships)
+- **Data Automation Engineer** for Fairmat  
+  Built web scraping pipeline collecting 14,000+ product records • Reduced duplicates by 45%
+- **Fashion Trend Analyst** for Consult-Trends  
+  Developed ARIMA models for trend forecasting • Created Power BI dashboards
+- **Conversation Analysis Specialist** for PITCHBOY  
+  Implemented NLP models for sentiment analysis in AI-user interactions
+
+### 🛠️ Personal Projects
 - **[Sentiment Analysis with BERT](https://github.com/OusmaneMomboMombo/sentiment-analysis-bert)**  
-  Implementation of a sentiment analysis pipeline with BERT, including data extraction, processing, and model training.
+  End-to-end pipeline for text sentiment classification
+- **[Housing Market Clustering](https://github.com/OusmaneMomboMombo/housing-cluster-analysis)**  
+  DBSCAN/K-Means implementation for real estate segmentation
+- **[Bitcoin Price Prediction](https://github.com/OusmaneMomboMombo/prophet-bitcoin-analysis)**  
+  Time-series forecasting using Facebook's Prophet
 
-- **[Housing Cluster Analysis](https://github.com/OusmaneMomboMombo/housing-cluster-analysis)**  
-  Analyzes housing market data using clustering algorithms (DBSCAN, K-Means) to segment properties based on features.
+## 📚 Education
+- **BAC+5 Grande École Program** (RNCP Level 7) - AI & Data Science @ Aivancity (2022-2027)
+- **Baccalauréat Scientifique** (Mention Bien) - Lycée Privée de Nzeng-Ayong, Gabon
 
-### Data Automation & Web Scraping
-- **[AI Article Detector](https://github.com/OusmaneMomboMombo/ai-article-detector)**  
-  Scrapes news articles, generates BERT embeddings and classifies them as AI-related or not using logistic regression.
-
-### Time Series Analysis
-- **[Bitcoin Price Analysis](https://github.com/OusmaneMomboMombo/prophet-bitcoin-analysis)**  
-  Time-series analysis and prediction of Bitcoin prices using Facebook's Prophet.
-
-## 💼 Professional Experience
-
-**Data Scientist Intern** @ [ENERGIE PRO EXPORT](https://www.energieproexport.com/) *(Jul 2024 - Sep 2024)*  
-- Optimized inventory by analyzing sales data (~10% cost reduction)
-- Developed predictive replenishment models in Python
-- Created interactive dashboards (Power BI/Excel)
-
-**Junior AI Consultant** @ [ALLIANCE EXPERTS](https://www.alliance-experts.com/) *(Jul 2023 - Sep 2023)*  
-- Designed AI solution to optimize automotive expertise processes
-- Defined key objectives including claims processing time reduction
-
-## 🎓 Education
-
-**BAC+5, Grande Ecole Program (RNCP Level 7)**  
-*aivancity School for Technology, Business and Society* *(2022 - 2027)*  
-- Artificial Intelligence & Data Science
-
-**Scientific Baccalaureate (with honors)**  
-*Lycée Privée de Nzeng-Ayong, Fondation MBEL* *(2021 - 2022)*
-
-## 🛠 Technical Skills
-
-**Advanced Techniques**  
-Machine Learning | Deep Learning | NLP | PCA | Cloud Computing | Big Data | Web Scraping
-
-**Programming**  
-Python (Pandas, NumPy, Scikit-learn) | SQL | R
-
-**Data Visualization**  
-Tableau | Power BI | Matplotlib/Seaborn
-
-**Tools**  
-Git | Excel | Selenium | TensorFlow/PyTorch
-
-## 📫 How to Reach Me
-
-- 📧 Email: [ousmane.mombo@gmail.com](mailto:ousmane.mombo@gmail.com)
+## 📬 Contact Me
+- 📧 Email: ousmane.mombo@gmail.com
 - 💼 LinkedIn: [linkedin.com/in/ousmane-mombo-mombo](https://www.linkedin.com/in/ousmane-mombo-mombo/)
-- 🌐 Portfolio: [ousmanemombomombo.github.io](https://ousmanemombomombo.github.io)
+- 📁 Download my [CV](CV_Alternance_Ousmane_MOMBO_MOMBO_Data_Scientist_v2.0.pdf)
 
----
-
-⭐ Feel free to explore my repositories and don't hesitate to reach out for collaborations or discussions about Data Science and AI!
+🌟 *Open to collaborations on interesting AI/Data Science projects!* 🌟
