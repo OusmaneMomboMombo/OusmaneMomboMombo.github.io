@@ -6,7 +6,6 @@
 
 3rd-year student at **Aivancity School for Technology, Business & Society** pursuing an Advanced Degree in Artificial Intelligence and Data Science. Passionate about building ethical AI solutions that combine technical excellence with sustainable impact.
 
-🔍 **Currently seeking** a 3-month internship (July-September 2025) in Data Science/AI
 
 ## 🌟 Featured Skills
 **▸ Advanced Techniques:**  
