@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ousmane Mombo Mombo | Data Scientist & AI Student</title>
+    <title>Ousmane Mombo Mombo - Data Scientist</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.1.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -11,8 +11,9 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#4F46E5',  // Indigo (matches CV)
-                        'secondary': '#10B981', // Emerald (accent)
+                        'primary': '#2563EB',  // Deep blue from your CV
+                        'secondary': '#1E40AF',  // Darker blue
+                        'accent': '#3B82F6'  // Lighter blue
                     }
                 }
             }
@@ -32,23 +33,27 @@
             position: absolute;
             left: 0;
             top: 0;
-            height: 100%;
+            bottom: 0;
             width: 2px;
-            background: #E5E7EB;
+            background: #3B82F6;
         }
-        .timeline-box {
+        .timeline-start {
             position: relative;
-            margin-left: 1.5rem;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
         }
-        .timeline-box::before {
+        .timeline-start::before {
             content: '';
             position: absolute;
-            left: -1.75rem;
-            top: 1rem;
+            left: -0.5rem;
+            top: 0.5rem;
             width: 1rem;
             height: 1rem;
             border-radius: 50%;
-            background: #4F46E5;
+            background: #3B82F6;
+        }
+        .timeline-end {
+            margin-bottom: 2rem;
         }
     </style>
 </head>
@@ -56,7 +61,7 @@
     <div class="drawer drawer-mobile">
       <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content flex flex-col">
-        <!-- Navbar -->
+        <!-- Fixed Navbar -->
         <div class="fixed top-0 left-0 right-0 z-30">
           <div class="navbar bg-white shadow-md">
             <div class="flex-none lg:hidden">
@@ -68,297 +73,281 @@
             <div class="flex-none hidden lg:block">
               <ul class="menu menu-horizontal">
                 <li><a href="#about" class="text-gray-700 hover:text-primary">About</a></li>
-                <li><a href="#projects" class="text-gray-700 hover:text-primary">Projects</a></li>
+                <li><a href="#skills" class="text-gray-700 hover:text-primary">Skills</a></li>
                 <li><a href="#experience" class="text-gray-700 hover:text-primary">Experience</a></li>
+                <li><a href="#projects" class="text-gray-700 hover:text-primary">Projects</a></li>
                 <li><a href="#education" class="text-gray-700 hover:text-primary">Education</a></li>
                 <li><a href="#contact" class="text-gray-700 hover:text-primary">Contact</a></li>
               </ul>
             </div>
-          </div>
+            </div>
         </div>
-
-        <!-- Social Links (Fixed) -->
         <div class="fixed top-20 right-4 z-20 flex flex-col space-y-4">
-            <a href="https://www.linkedin.com/in/ousmane-mombo-mombo/" target="_blank" class="text-primary hover:text-secondary transition-colors duration-300">
+            <a href="https://www.linkedin.com/in/ousmane-mombo-mombo/" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary transition-colors duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
               </svg>
             </a>
-            <a href="https://github.com/OusmaneMomboMombo" target="_blank" class="text-primary hover:text-secondary transition-colors duration-300">
+            <a href="https://github.com/OusmaneMomboMombo" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary transition-colors duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
               </svg>
             </a>
-        </div>
-
-        <!-- Main Content -->
+          </div>
         <div class="pt-16"></div>
-        <div class="container mx-auto px-4 py-12">
-            <!-- About Section -->
-            <section id="about" class="mb-20">
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-1/3 bg-gradient-to-br from-primary to-secondary flex items-center justify-center p-8">
-                            <div class="text-center text-white">
-                                <div class="avatar mb-4">
-                                    <div class="w-48 rounded-full ring ring-white ring-offset-base-100 ring-offset-2">
-                                        <img src="profile-pic.jpeg" alt="Ousmane Mombo Mombo" />
-                                    </div>
+            <!-- New section for profile picture and introduction -->
+            <div class="container mx-auto px-4 py-12">
+                <section id="about" class="mb-20">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3">
+                                <img src="profile-pic.jpeg" alt="Ousmane Mombo Mombo" class="w-full h-full object-cover">
+                            </div>
+                            <div class="md:w-2/3 p-8">
+                                <h1 class="text-3xl font-bold mb-4 text-gray-800">Ousmane Mombo Mombo</h1>
+                                <p class="text-xl mb-6 text-gray-700">Data Scientist | AI & Machine Learning Specialist</p>
+                                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                                    I'm a 4th-year student at aivancity School for Technology, Business and Society, pursuing a Higher Education Diploma in Artificial Intelligence and Data Science. Passionate about leveraging data to drive strategic decisions and optimize business processes.
+                                </p>
+                                <p class="text-lg text-gray-700 leading-relaxed">
+                                    Currently looking for a work-study program (3 weeks in company / 1 week at school) starting from July 2025 to contribute my skills in machine learning, data analysis, and automation to high-value projects.
+                                </p>
+                                <div class="mt-6">
+                                    <a href="CV_Alternance_Ousmane_MOMBO_MOMBO_Data_Scientist_v2.0_English.pdf" download class="btn bg-primary hover:bg-secondary text-white">Download CV</a>
                                 </div>
-                                <h1 class="text-3xl font-bold mb-2">Ousmane Mombo Mombo</h1>
-                                <p class="text-xl mb-4">Data Scientist | AI Student</p>
-                                <div class="badge badge-white gap-2 mb-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
-                                    </svg>
-                                    Seeking Work-Study Opportunity
-                                </div>
-                                <a href="CV_Alternance_Ousmane_MOMBO_MOMBO_Data_Scientist_v2.0_English.pdf" class="btn btn-outline btn-white" download>Download CV</a>
                             </div>
                         </div>
-                        <div class="md:w-2/3 p-8">
-                            <h2 class="text-2xl font-bold mb-4 text-gray-800">About Me</h2>
-                            <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                                Hello! I'm Ousmane Mombo Mombo, a 4th-year student at Aivancity School for Technology, Business and Society, enrolled in the state-recognized Grande École program. I'm pursuing a Higher Education Diploma in Artificial Intelligence and Data Science with the goal of designing innovative technological solutions aligned with business strategic needs while incorporating impact, sustainability, and ethical considerations.
-                            </p>
-                            <div class="mb-6">
-                                <h3 class="text-xl font-semibold mb-2 text-gray-800">Technical Expertise</h3>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="badge badge-primary">Machine Learning</span>
-                                    <span class="badge badge-primary">Deep Learning</span>
-                                    <span class="badge badge-primary">NLP</span>
-                                    <span class="badge badge-primary">Python</span>
-                                    <span class="badge badge-primary">SQL</span>
-                                    <span class="badge badge-primary">TensorFlow</span>
-                                    <span class="badge badge-primary">PyTorch</span>
-                                    <span class="badge badge-primary">Power BI</span>
-                                    <span class="badge badge-primary">Web Scraping</span>
+                    </div>
+                </section>
+
+                <section id="skills" class="mb-20">
+                    <h2 class="text-4xl font-bold mb-6 text-gray-800">Technical Skills</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Advanced Data Techniques</h3>
+                                <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                    <li>Machine Learning (Supervised & Unsupervised)</li>
+                                    <li>Deep Learning & NLP</li>
+                                    <li>PCA & Dimensionality Reduction</li>
+                                    <li>Cloud Computing & Big Data</li>
+                                    <li>Web Scraping & Data Automation</li>
+                                    <li>RAG Architecture</li>
+                                    <li>Time Series Analysis</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Tools & Technologies</h3>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 mb-2">Programming</h4>
+                                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                            <li>Python</li>
+                                            <li>SQL</li>
+                                            <li>R</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 mb-2">Data Science</h4>
+                                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                            <li>Pandas, NumPy</li>
+                                            <li>Scikit-learn, TensorFlow</li>
+                                            <li>PyTorch, Statsmodels</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 mb-2">Visualization</h4>
+                                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                            <li>Tableau</li>
+                                            <li>Power BI</li>
+                                            <li>Matplotlib/Seaborn</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 mb-2">Other</h4>
+                                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                            <li>Git</li>
+                                            <li>Excel</li>
+                                            <li>Selenium</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                            <div>
-                                <h3 class="text-xl font-semibold mb-2 text-gray-800">Key Achievements</h3>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="experience" class="mb-20">
+                    <h2 class="text-4xl font-bold mb-6 text-gray-800">Professional Experience</h2>
+                    
+                    <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Data Scientist Intern</h3>
+                        <p class="text-lg text-gray-700 mb-2">ENERGIE PRO EXPORT | Jul 2024 - Sep 2024 | Louveciennes, France</p>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                            <li>Optimized inventory by analyzing sales data (~10% cost reduction)</li>
+                            <li>Developed a predictive replenishment model using Python</li>
+                            <li>Created interactive dashboards (Power BI/Excel) for performance monitoring</li>
+                            <li>Automated data cleaning (Python, Power Query) saving 50% time</li>
+                            <li>Identified underperforming products for strategic adjustment</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Junior AI Consultant</h3>
+                        <p class="text-lg text-gray-700 mb-2">ALLIANCE EXPERTS | Jul 2023 - Sep 2023 | Clamart, France</p>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                            <li>Designed AI project to optimize automotive expertise processes</li>
+                            <li>Defined key objectives including claims processing time reduction</li>
+                            <li>Designed features for an intelligent virtual assistant</li>
+                            <li>Identified functional AI needs for the project</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="text-3xl font-bold mb-6 text-gray-800 mt-12">Academic Projects (Company Partnerships)</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-semibold mb-2 text-gray-800">Data Automation Engineer</h3>
+                                <p class="text-lg text-gray-700 mb-2">FAIRMAT | Sep 2024 - Dec 2024</p>
                                 <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                                    <li>Developed a web scraping pipeline for recycled materials data, enabling a startup to better target circular economy opportunities</li>
-                                    <li>Optimized inventory management, reducing storage costs by 10% through data analysis and replenishment models</li>
-                                    <li>Created interactive dashboards to centralize business performance data and improve strategic decision-making</li>
-                                    <li>Predicted fashion trends using time series models, providing actionable insights for commercial strategies</li>
+                                    <li>Developed web scraping pipeline (Python/Selenium) collecting 14,000+ Amazon product datasets</li>
+                                    <li>Data cleaning and structuring (~45% duplicates reduction)</li>
+                                    <li>Created automatic keyword categorization system</li>
+                                    <li>Built analyzable database (6,572 final records)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-semibold mb-2 text-gray-800">Fashion Trend Analyst</h3>
+                                <p class="text-lg text-gray-700 mb-2">CONSULT-TRENDS | Jan 2024 - Apr 2024</p>
+                                <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                    <li>Analyzed fashion dataset (10+ features: styles, colors, materials)</li>
+                                    <li>Developed ARIMA models for trend forecasting</li>
+                                    <li>Created interactive dashboards (Python/Power BI)</li>
+                                    <li>Presented results to stakeholders</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-semibold mb-2 text-gray-800">Conversation Analyst</h3>
+                                <p class="text-lg text-gray-700 mb-2">PITCHBOY | Sep 2023 - Dec 2023</p>
+                                <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                    <li>Conducted sentiment analysis on AI-user interactions</li>
+                                    <li>Implemented pre-trained NLP models</li>
+                                    <li>Developed analysis pipelines in Python</li>
+                                    <li>Visualized insights to improve user experience</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-semibold mb-2 text-gray-800">Multilingual Corpus Creator</h3>
+                                <p class="text-lg text-gray-700 mb-2">ATOS | Jan 2023 - Mar 2023</p>
+                                <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                    <li>Created multilingual (FR/EN) vocal corpus for reception environments</li>
+                                    <li>Collected and diversified voice data</li>
+                                    <li>Filtered, categorized and transcribed data</li>
+                                    <li>Documented the solution for future use</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- Projects Section -->
-            <section id="projects" class="mb-20">
-                <h2 class="text-4xl font-bold mb-6 text-gray-800">Featured Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Project 1 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <div class="p-8">
-                            <div class="flex items-center mb-4">
-                                <div class="bg-primary text-white p-3 rounded-lg mr-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                    </svg>
-                                </div>
-                                <h3 class="text-2xl font-semibold text-gray-800">Sentiment Analysis with BERT</h3>
-                            </div>
-                            <p class="text-gray-700 mb-4">Implementation of a sentiment analysis pipeline with BERT, including data extraction, processing, and model training.</p>
-                            <div class="flex space-x-4">
+                <section id="projects" class="mb-20">
+                    <h2 class="text-4xl font-bold mb-6 text-gray-800">GitHub Projects</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Sentiment Analysis with BERT</h3>
+                                <p class="text-gray-700 mb-4">Implementation of a sentiment analysis pipeline with BERT, including data extraction, processing, and model training.</p>
                                 <a href="https://github.com/OusmaneMomboMombo/sentiment-analysis-bert" class="btn bg-primary hover:bg-secondary text-white" target="_blank">View on GitHub</a>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Project 2 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <div class="p-8">
-                            <div class="flex items-center mb-4">
-                                <div class="bg-primary text-white p-3 rounded-lg mr-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                                    </svg>
-                                </div>
-                                <h3 class="text-2xl font-semibold text-gray-800">Housing Cluster Analysis</h3>
-                            </div>
-                            <p class="text-gray-700 mb-4">Analyzes housing market data using clustering algorithms (DBSCAN, K-Means) to segment properties based on features.</p>
-                            <div class="flex space-x-4">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Housing Cluster Analysis</h3>
+                                <p class="text-gray-700 mb-4">Analyzes housing market data using clustering algorithms (DBSCAN, K-Means) to segment properties based on features.</p>
                                 <a href="https://github.com/OusmaneMomboMombo/housing-cluster-analysis" class="btn bg-primary hover:bg-secondary text-white" target="_blank">View on GitHub</a>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <div class="p-8">
-                            <div class="flex items-center mb-4">
-                                <div class="bg-primary text-white p-3 rounded-lg mr-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                </div>
-                                <h3 class="text-2xl font-semibold text-gray-800">Bitcoin Price Prediction</h3>
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-semibold mb-4 text-gray-800">AI Article Detector</h3>
+                                <p class="text-gray-700 mb-4">Scrapes news articles, generates BERT embeddings and classifies them as AI-related or not using logistic regression.</p>
+                                <a href="https://github.com/OusmaneMomboMombo/ai-article-detector" class="btn bg-primary hover:bg-secondary text-white" target="_blank">View on GitHub</a>
                             </div>
-                            <p class="text-gray-700 mb-4">Time-series analysis and prediction of Bitcoin prices using Facebook's Prophet forecasting tool.</p>
-                            <div class="flex space-x-4">
+                        </div>
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Bitcoin Price Analysis</h3>
+                                <p class="text-gray-700 mb-4">Time-series analysis and prediction of Bitcoin prices using Facebook's Prophet.</p>
                                 <a href="https://github.com/OusmaneMomboMombo/prophet-bitcoin-analysis" class="btn bg-primary hover:bg-secondary text-white" target="_blank">View on GitHub</a>
                             </div>
                         </div>
                     </div>
+                </section>
 
-                    <!-- Project 4 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <div class="p-8">
-                            <div class="flex items-center mb-4">
-                                <div class="bg-primary text-white p-3 rounded-lg mr-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                                    </svg>
-                                </div>
-                                <h3 class="text-2xl font-semibold text-gray-800">House Price Prediction</h3>
+                <section id="education" class="mb-20">
+                    <h2 class="text-4xl font-bold mb-6 text-gray-800">Education</h2>
+                    <ul class="timeline">
+                        <li class="mb-8">
+                            <div class="timeline-start text-primary font-semibold">2022 - 2027</div>
+                            <div class="timeline-end timeline-box bg-white p-4 rounded-lg shadow">
+                                <h3 class="font-semibold text-lg mb-2">BAC+5, Grande Ecole Program (RNCP Level 7)</h3>
+                                <p class="text-gray-700">aivancity School for Technology, Business and Society</p>
+                                <p class="text-gray-600">Artificial Intelligence & Data Science</p>
                             </div>
-                            <p class="text-gray-700 mb-4">A regression model to predict house prices based on various features using machine learning.</p>
-                            <div class="flex space-x-4">
-                                <a href="https://github.com/OusmaneMomboMombo/house_price_prediction" class="btn bg-primary hover:bg-secondary text-white" target="_blank">View on GitHub</a>
+                        </li>
+                        <li class="mb-8">
+                            <div class="timeline-start text-primary font-semibold">2022 - 2025</div>   
+                            <div class="timeline-end timeline-box bg-white p-4 rounded-lg shadow">
+                                <h3 class="font-semibold text-lg mb-2">BAC+3, Grande Ecole Program (Targeted BAC+5)</h3>
+                                <p class="text-gray-700">aivancity School for Technology, Business and Society</p>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Experience Section -->
-            <section id="experience" class="mb-20">
-                <h2 class="text-4xl font-bold mb-6 text-gray-800">Professional Experience</h2>
-                
-                <!-- Experience 1 -->
-                <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                        <div>
-                            <h3 class="text-2xl font-semibold text-gray-800">Data Automation Engineer</h3>
-                            <p class="text-lg text-gray-600">Fairmat · Academic Project (Sep 2024 - Dec 2024)</p>
-                        </div>
-                        <div class="mt-2 md:mt-0">
-                            <span class="badge badge-primary">Python</span>
-                            <span class="badge badge-primary">Selenium</span>
-                            <span class="badge badge-primary">Data Analysis</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 mb-4">Developed an automated web scraping solution for a startup specializing in carbon fiber composite recycling, enabling identification of commercial opportunities.</p>
-                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                        <li>Built a Python/Selenium pipeline collecting 14,000+ Amazon product records</li>
-                        <li>Reduced duplicates by 45% through data cleaning and missing value management</li>
-                        <li>Created automatic keyword categorization system</li>
-                        <li>Delivered analyzable database with 6,572 final records</li>
-                        <li>Visualized data to identify strategic market segments</li>
+                        </li>
+                        <li>
+                            <div class="timeline-start text-primary font-semibold">2021 - 2022</div>
+                            <div class="timeline-end timeline-box bg-white p-4 rounded-lg shadow">
+                                <h3 class="font-semibold text-lg mb-2">Scientific Baccalaureate (with honors)</h3>
+                                <p class="text-gray-700">Lycée Privée de Nzeng-Ayong, Fondation MBEL</p>
+                                <p class="text-gray-600">Libreville, Gabon</p>
+                            </div>
+                        </li>
                     </ul>
-                </div>
+                </section>
 
-                <!-- Experience 2 -->
-                <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                        <div>
-                            <h3 class="text-2xl font-semibold text-gray-800">Data Scientist Intern</h3>
-                            <p class="text-lg text-gray-600">Energie Pro Export · Internship (Jul 2024 - Sep 2024)</p>
-                        </div>
-                        <div class="mt-2 md:mt-0">
-                            <span class="badge badge-primary">Python</span>
-                            <span class="badge badge-primary">Power BI</span>
-                            <span class="badge badge-primary">Inventory Optimization</span>
+                <section id="contact" class="mb-20">
+                    <h2 class="text-4xl font-bold mb-6 text-gray-800">Contact</h2>
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <p class="text-lg text-gray-700 mb-2">Email: ousmane.mombo@gmail.com</p>
+                        <p class="text-lg text-gray-700 mb-4">Location: Cachan, Île-de-France, France</p>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/ousmane-mombo-mombo/" target="_blank" class="btn bg-primary hover:bg-secondary text-white">LinkedIn</a>
+                            <a href="https://github.com/OusmaneMomboMombo" class="btn bg-primary hover:bg-secondary text-white" target="_blank">GitHub</a>
+                            <a href="CV_Alternance_Ousmane_MOMBO_MOMBO_Data_Scientist_v2.0_English.pdf" download class="btn bg-primary hover:bg-secondary text-white">Download CV</a>
                         </div>
                     </div>
-                    <p class="text-gray-700 mb-4">Optimized inventory management for a construction materials distributor through data analysis and predictive modeling.</p>
-                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                        <li>Reduced storage costs by 10% through inventory analysis</li>
-                        <li>Developed predictive replenishment model in Python</li>
-                        <li>Created interactive dashboards (Power BI/Excel) for performance monitoring</li>
-                        <li>Automated data cleaning, saving 50% of processing time</li>
-                        <li>Identified underperforming products for strategic adjustment</li>
-                    </ul>
-                </div>
-
-                <!-- Experience 3 -->
-                <div class="bg-white rounded-lg shadow-lg p-8">
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                        <div>
-                            <h3 class="text-2xl font-semibold text-gray-800">Trend Analysis Consultant</h3>
-                            <p class="text-lg text-gray-600">Consult-Trends · Academic Project (Jan 2024 - Apr 2024)</p>
-                        </div>
-                        <div class="mt-2 md:mt-0">
-                            <span class="badge badge-primary">ARIMA</span>
-                            <span class="badge badge-primary">Time Series</span>
-                            <span class="badge badge-primary">Power BI</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 mb-4">Predicted fashion trends for a style consulting firm using time series analysis and data visualization.</p>
-                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                        <li>Analyzed fashion dataset with 10+ features (styles, colors, materials)</li>
-                        <li>Preprocessed and enriched trend data</li>
-                        <li>Developed ARIMA models for trend forecasting</li>
-                        <li>Created interactive dashboards (Python/Power BI)</li>
-                        <li>Presented insights to stakeholders</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Education Section -->
-            <section id="education" class="mb-20">
-                <h2 class="text-4xl font-bold mb-6 text-gray-800">Education</h2>
-                <ul class="timeline">
-                    <li class="mb-8">
-                        <div class="timeline-start text-primary font-semibold">2022 - 2027</div>
-                        <div class="timeline-end timeline-box bg-white p-4 rounded-lg shadow">
-                            <h3 class="font-semibold text-lg mb-2">MSc, Grande École Program (RNCP Level 7)</h3>
-                            <p class="text-gray-700">Aivancity School for Technology, Business and Society</p>
-                            <p class="text-gray-600">Artificial Intelligence & Data Science</p>
-                        </div>
-                    </li>
-                    <li class="mb-8">
-                        <div class="timeline-start text-primary font-semibold">2022 - 2025</div>   
-                        <div class="timeline-end timeline-box bg-white p-4 rounded-lg shadow">
-                            <h3 class="font-semibold text-lg mb-2">BSc, Grande École Program</h3>
-                            <p class="text-gray-700">Aivancity School for Technology, Business and Society</p>
-                            <p class="text-gray-600">Artificial Intelligence & Data Science</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-start text-primary font-semibold">2021 - 2022</div>
-                        <div class="timeline-end timeline-box bg-white p-4 rounded-lg shadow">
-                            <h3 class="font-semibold text-lg mb-2">Scientific Baccalaureate (Honors)</h3>
-                            <p class="text-gray-700">Lycée Privée de Nzeng-Ayong</p>
-                            <p class="text-gray-600">Libreville, Gabon</p>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact" class="mb-20">
-                <h2 class="text-4xl font-bold mb-6 text-gray-800">Contact</h2>
-                <div class="bg-white rounded-lg shadow-lg p-8">
-                    <p class="text-lg text-gray-700 mb-2">Email: ousmane.mombo@gmail.com</p>
-                    <p class="text-lg text-gray-700 mb-4">Location: Cachan, Île-de-France, France</p>
-                    <div class="flex space-x-4">
-                        <a href="https://www.linkedin.com/in/ousmane-mombo-mombo/" target="_blank" class="btn bg-primary hover:bg-secondary text-white">LinkedIn</a>
-                        <a href="https://github.com/OusmaneMomboMombo" class="btn bg-primary hover:bg-secondary text-white" target="_blank">GitHub</a>
-                        <a href="CV_Alternance_Ousmane_MOMBO_MOMBO_Data_Scientist_v2.0_English.pdf" class="btn btn-outline btn-primary" download>Download CV</a>
-                    </div>
-                </div>
-            </section>
-        </div>
-      </div>
-
-      <!-- Mobile Sidebar -->
-      <div class="drawer-side">
-        <label for="my-drawer-3" class="drawer-overlay"></label> 
-        <ul class="menu p-4 w-80 h-full bg-base-200 pt-20">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+                </section>
+            </div>
+           
+        </div> 
+        <div class="drawer-side">
+            <label for="my-drawer-3" class="drawer-overlay"></label> 
+            <ul class="menu p-4 w-80 h-full bg-base-200 pt-20">
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#education">Education</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
     </div>
 </body>
 </html>
