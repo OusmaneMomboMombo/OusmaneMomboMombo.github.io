@@ -12,11 +12,11 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#2563EB',      // Bleu professionnel (CV)
+                        'primary': '#2563EB',      // Professional blue (matches CV)
                         'primary-dark': '#1E40AF', 
-                        'accent': '#10B981',       // Vert pour les highlights
-                        'dark': '#1F2937',         // Texte sombre
-                        'light': '#F9FAFB'          // Fond clair
+                        'accent': '#10B981',       // Green for highlights
+                        'dark': '#1F2937',         // Dark text
+                        'light': '#F9FAFB'          // Light background
                     },
                     animation: {
                         'float': 'float 3s ease-in-out infinite',
@@ -69,6 +69,13 @@
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
+        .experience-card {
+            transition: all 0.3s ease;
+        }
+        .experience-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -81,8 +88,8 @@
             <ul class="menu menu-horizontal space-x-2">
                 <li><a href="#about" class="text-dark hover:text-primary font-medium">About</a></li>
                 <li><a href="#skills" class="text-dark hover:text-primary font-medium">Skills</a></li>
-                <li><a href="#projects" class="text-dark hover:text-primary font-medium">Projects</a></li>
                 <li><a href="#experience" class="text-dark hover:text-primary font-medium">Experience</a></li>
+                <li><a href="#projects" class="text-dark hover:text-primary font-medium">Projects</a></li>
                 <li><a href="#education" class="text-dark hover:text-primary font-medium">Education</a></li>
                 <li><a href="#contact" class="text-dark hover:text-primary font-medium">Contact</a></li>
             </ul>
@@ -108,10 +115,10 @@
                 <a href="#skills" class="font-medium text-lg">Skills</a>
             </li>
             <li class="mb-4">
-                <a href="#projects" class="font-medium text-lg">Projects</a>
+                <a href="#experience" class="font-medium text-lg">Experience</a>
             </li>
             <li class="mb-4">
-                <a href="#experience" class="font-medium text-lg">Experience</a>
+                <a href="#projects" class="font-medium text-lg">Projects</a>
             </li>
             <li class="mb-4">
                 <a href="#education" class="font-medium text-lg">Education</a>
@@ -138,7 +145,7 @@
                     <h1 class="text-4xl md:text-5xl font-bold text-dark mb-4">Ousmane Mombo Mombo</h1>
                     <h2 class="text-2xl md:text-3xl text-primary mb-6">Data Scientist & AI Engineer</h2>
                     <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-                        Passionate 3rd-year student at <span class="font-semibold">Aivancity School for Technology, Business & Society</span>, specializing in AI and Data Science. Focused on building ethical, innovative solutions that align with business strategy and sustainability goals.
+                        👋 Hello, I'm Ousmane Mombo Mombo, a 3rd-year student at Aivancity School for Technology, Business & Society, enrolled in the Grande École program recognized by the French government. I'm pursuing an Advanced Degree in Artificial Intelligence and Data Science with the goal of designing innovative technological solutions that align with business strategic needs while incorporating impact, sustainability, and ethical considerations.
                     </p>
                     <div class="flex flex-wrap gap-4 mb-8">
                         <a href="#contact" class="btn bg-primary hover:bg-primary-dark text-white px-8">Contact Me</a>
@@ -167,19 +174,25 @@
             <h2 class="text-3xl md:text-4xl font-bold text-center text-dark mb-12">Technical Skills</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Hard Skills -->
+                <!-- Advanced Techniques -->
                 <div class="bg-light rounded-xl p-6 shadow-md">
                     <h3 class="text-xl font-semibold text-primary mb-4">Advanced Data Techniques</h3>
                     <div class="flex flex-wrap gap-3">
                         <span class="skill-badge badge badge-primary badge-lg">Machine Learning</span>
+                        <span class="skill-badge badge badge-primary badge-lg">Supervised Learning</span>
+                        <span class="skill-badge badge badge-primary badge-lg">Unsupervised Learning</span>
+                        <span class="skill-badge badge badge-primary badge-lg">Dimensionality Reduction</span>
                         <span class="skill-badge badge badge-primary badge-lg">Deep Learning</span>
                         <span class="skill-badge badge badge-primary badge-lg">NLP</span>
                         <span class="skill-badge badge badge-primary badge-lg">PCA</span>
                         <span class="skill-badge badge badge-primary badge-lg">Cloud Computing</span>
                         <span class="skill-badge badge badge-primary badge-lg">Big Data</span>
                         <span class="skill-badge badge badge-primary badge-lg">Web Scraping</span>
-                        <span class="skill-badge badge badge-primary badge-lg">RAG</span>
-                        <span class="skill-badge badge badge-primary badge-lg">Time Series</span>
+                        <span class="skill-badge badge badge-primary badge-lg">RAG Architecture</span>
+                        <span class="skill-badge badge badge-primary badge-lg">Time Series Analysis</span>
+                        <span class="skill-badge badge badge-primary badge-lg">Data Automation</span>
+                        <span class="skill-badge badge badge-primary badge-lg">Data Processing</span>
+                        <span class="skill-badge badge badge-primary badge-lg">Data Visualization</span>
                     </div>
                 </div>
 
@@ -197,9 +210,14 @@
                 <div class="bg-light rounded-xl p-6 shadow-md">
                     <h3 class="text-xl font-semibold text-primary mb-4">Data Science Tools</h3>
                     <div class="flex flex-wrap gap-3">
+                        <span class="skill-badge badge badge-primary badge-lg">Git</span>
                         <span class="skill-badge badge badge-primary badge-lg">Pandas</span>
                         <span class="skill-badge badge badge-primary badge-lg">NumPy</span>
+                        <span class="skill-badge badge badge-primary badge-lg">Seaborn</span>
+                        <span class="skill-badge badge badge-primary badge-lg">Matplotlib</span>
+                        <span class="skill-badge badge badge-primary badge-lg">SciPy</span>
                         <span class="skill-badge badge badge-primary badge-lg">Scikit-learn</span>
+                        <span class="skill-badge badge badge-primary badge-lg">Statsmodels</span>
                         <span class="skill-badge badge badge-primary badge-lg">TensorFlow</span>
                         <span class="skill-badge badge badge-primary badge-lg">PyTorch</span>
                         <span class="skill-badge badge badge-primary badge-lg">BeautifulSoup</span>
@@ -213,8 +231,7 @@
                     <div class="flex flex-wrap gap-3">
                         <span class="skill-badge badge badge-primary badge-lg">Tableau</span>
                         <span class="skill-badge badge badge-primary badge-lg">Power BI</span>
-                        <span class="skill-badge badge badge-primary badge-lg">Matplotlib</span>
-                        <span class="skill-badge badge badge-primary badge-lg">Seaborn</span>
+                        <span class="skill-badge badge badge-primary badge-lg">Excel</span>
                     </div>
                 </div>
 
@@ -223,28 +240,29 @@
                     <h3 class="text-xl font-semibold text-primary mb-4">Soft Skills</h3>
                     <div class="flex flex-wrap gap-3">
                         <span class="skill-badge badge badge-accent badge-lg">Analytical Mindset</span>
-                        <span class="skill-badge badge badge-accent badge-lg">Teamwork</span>
+                        <span class="skill-badge badge badge-accent badge-lg">Interpersonal Skills</span>
                         <span class="skill-badge badge badge-accent badge-lg">Critical Thinking</span>
+                        <span class="skill-badge badge badge-accent badge-lg">Teamwork</span>
+                        <span class="skill-badge badge badge-accent badge-lg">Rigor</span>
+                        <span class="skill-badge badge badge-accent badge-lg">Autonomy</span>
                         <span class="skill-badge badge badge-accent badge-lg">Adaptability</span>
+                        <span class="skill-badge badge badge-accent badge-lg">Flexibility</span>
                         <span class="skill-badge badge badge-accent badge-lg">Creativity</span>
+                        <span class="skill-badge badge badge-accent badge-lg">Curiosity</span>
+                        <span class="skill-badge badge badge-accent badge-lg">Oral Communication</span>
+                        <span class="skill-badge badge badge-accent badge-lg">AI Ethics</span>
                     </div>
                 </div>
 
                 <!-- Languages -->
                 <div class="bg-light rounded-xl p-6 shadow-md">
                     <h3 class="text-xl font-semibold text-primary mb-4">Languages</h3>
-                    <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-4">
                         <div>
-                            <span class="font-medium">French</span>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-primary h-2.5 rounded-full" style="width: 100%"></div>
-                            </div>
+                            <span class="font-medium">French: Native</span>
                         </div>
                         <div>
-                            <span class="font-medium">English (B2)</span>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-primary h-2.5 rounded-full" style="width: 70%"></div>
-                            </div>
+                            <span class="font-medium">English: B2 (Intermediate)</span>
                         </div>
                     </div>
                 </div>
@@ -252,76 +270,168 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 px-6 bg-gray-50">
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 px-6 bg-gray-50">
         <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-dark mb-4">Featured Projects</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Academic and personal projects showcasing my technical skills and problem-solving approach.</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-dark mb-12">Professional Experience</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-primary mb-6 pb-2 border-b-2 border-primary">Internships</h3>
+                
+                <!-- Internship 1 -->
+                <div class="experience-card bg-white rounded-xl shadow-lg p-8 mb-8">
+                    <h3 class="text-2xl font-bold text-dark mb-1">Data Scientist Intern</h3>
+                    <p class="text-lg text-primary mb-2">Energie Pro Export | Jul - Sep 2024 | Louveciennes, France (Hybrid)</p>
+                    <p class="text-gray-700 mb-4">
+                        During this 9-week internship at Energie Pro Export, a SME specializing in construction materials distribution, I applied my data analysis skills to optimize commercial operations and inventory management.
+                    </p>
+                    <h4 class="text-lg font-semibold text-dark mb-2">Key Achievements:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                        <li>Conducted in-depth inventory data analysis to identify overstocked or obsolete products</li>
+                        <li>Developed a predictive restocking model based on historical sales, reducing storage costs by <span class="font-semibold">10%</span></li>
+                        <li>Adjusted restocking thresholds to prevent shortages</li>
+                        <li>Created interactive dashboards in Python and Excel for real-time sales and inventory tracking</li>
+                        <li>Reduced time spent on manual data collection and analysis by <span class="font-semibold">50%</span></li>
+                        <li>Identified underperforming products to adjust sales strategies</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge badge-primary badge-outline">Python</span>
+                        <span class="badge badge-primary badge-outline">Excel</span>
+                        <span class="badge badge-primary badge-outline">Data Analysis</span>
+                        <span class="badge badge-primary badge-outline">Power BI</span>
+                        <span class="badge badge-primary badge-outline">Power Query</span>
+                    </div>
+                </div>
+
+                <!-- Internship 2 -->
+                <div class="experience-card bg-white rounded-xl shadow-lg p-8 mb-8">
+                    <h3 class="text-2xl font-bold text-dark mb-1">Junior AI Consultant Intern</h3>
+                    <p class="text-lg text-primary mb-2">Alliance Experts | Jul - Sep 2023 | Clamart, France (On-site)</p>
+                    <p class="text-gray-700 mb-4">
+                        Contributed to designing an AI project to improve automotive expertise efficiency, focusing on reducing claims processing time.
+                    </p>
+                    <h4 class="text-lg font-semibold text-dark mb-2">Key Responsibilities:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                        <li>Defined key objectives including a <span class="font-semibold">30% reduction</span> in processing time</li>
+                        <li>Designed features for an intelligent virtual assistant</li>
+                        <li>Identified essential AI functional requirements for the project</li>
+                        <li>Analyzed data and optimized business processes</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge badge-primary badge-outline">AI Consulting</span>
+                        <span class="badge badge-primary badge-outline">Process Optimization</span>
+                        <span class="badge badge-primary badge-outline">Excel</span>
+                        <span class="badge badge-primary badge-outline">SQL</span>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-bold text-primary mb-6 pb-2 border-b-2 border-primary mt-12">Academic Projects (School-Enterprise Partnerships)</h3>
+                
+                <!-- Academic Project 1 -->
+                <div class="experience-card bg-white rounded-xl shadow-lg p-8 mb-8">
+                    <h3 class="text-2xl font-bold text-dark mb-1">Data Automation Engineer</h3>
+                    <p class="text-lg text-primary mb-2">Fairmat | Sep - Dec 2024 | Paris, France</p>
+                    <p class="text-gray-700 mb-4">
+                        Collaborated with Fairmat, a startup specializing in carbon fiber composite recycling, to develop an automated solution for web data collection and analysis to identify commercial opportunities.
+                    </p>
+                    <h4 class="text-lg font-semibold text-dark mb-2">Key Achievements:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                        <li>Built a Python/Selenium web scraping pipeline collecting <span class="font-semibold">14,000+</span> product records from Amazon</li>
+                        <li>Cleaned and structured data, reducing duplicates by <span class="font-semibold">45%</span> with missing value management</li>
+                        <li>Developed an automatic categorization system based on keywords</li>
+                        <li>Created an enriched database (<span class="font-semibold">6,572</span> final records) ready for advanced analysis</li>
+                        <li>Visualized results to identify strategic segments and pricing opportunities</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge badge-primary badge-outline">Python</span>
+                        <span class="badge badge-primary badge-outline">Selenium</span>
+                        <span class="badge badge-primary badge-outline">Web Scraping</span>
+                        <span class="badge badge-primary badge-outline">Data Cleaning</span>
+                    </div>
+                </div>
+
+                <!-- Academic Project 2 -->
+                <div class="experience-card bg-white rounded-xl shadow-lg p-8 mb-8">
+                    <h3 class="text-2xl font-bold text-dark mb-1">Fashion Trend Analyst</h3>
+                    <p class="text-lg text-primary mb-2">Consult-Trends | Jan - Mar 2024 | Paris, France</p>
+                    <p class="text-gray-700 mb-4">
+                        Analyzed fashion datasets to detect trends and predict future developments in styles, colors, and materials.
+                    </p>
+                    <h4 class="text-lg font-semibold text-dark mb-2">Key Contributions:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                        <li>Processed datasets with 10+ fashion characteristics (styles, colors, materials)</li>
+                        <li>Developed ARIMA models for trend forecasting</li>
+                        <li>Created interactive dashboards with Python and Power BI</li>
+                        <li>Presented findings to stakeholders</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge badge-primary badge-outline">Time Series</span>
+                        <span class="badge badge-primary badge-outline">ARIMA</span>
+                        <span class="badge badge-primary badge-outline">Power BI</span>
+                    </div>
+                </div>
+
+                <!-- Academic Project 3 -->
+                <div class="experience-card bg-white rounded-xl shadow-lg p-8 mb-8">
+                    <h3 class="text-2xl font-bold text-dark mb-1">Conversation Analysis Specialist</h3>
+                    <p class="text-lg text-primary mb-2">PITCHBOY | Sep - Dec 2023 | Paris, France</p>
+                    <p class="text-gray-700 mb-4">
+                        Analyzed sentiment in interactions between PITCHBOY's AI and users using video and textual data.
+                    </p>
+                    <h4 class="text-lg font-semibold text-dark mb-2">Key Contributions:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                        <li>Preprocessed data and implemented pre-trained NLP models</li>
+                        <li>Developed Python analysis pipelines</li>
+                        <li>Integrated automatic language processing models</li>
+                        <li>Visualized insights to improve user experience</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge badge-primary badge-outline">NLP</span>
+                        <span class="badge badge-primary badge-outline">Python</span>
+                        <span class="badge badge-primary badge-outline">Sentiment Analysis</span>
+                    </div>
+                </div>
+
+                <!-- Academic Project 4 -->
+                <div class="experience-card bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-dark mb-1">Multilingual Speech Corpus Creator</h3>
+                    <p class="text-lg text-primary mb-2">Atos | Jan - Mar 2023 | Paris, France</p>
+                    <p class="text-gray-700 mb-4">
+                        Created a multilingual (French/English) speech corpus in a university reception environment.
+                    </p>
+                    <h4 class="text-lg font-semibold text-dark mb-2">Key Contributions:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                        <li>Selected recording environment with Atos (university setting with 2 speakers)</li>
+                        <li>Collected diverse audio data (multiple voices, ages, genders)</li>
+                        <li>Filtered, categorized and transcribed recordings</li>
+                        <li>Delivered fully documented corpus</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge badge-primary badge-outline">NLP</span>
+                        <span class="badge badge-primary badge-outline">Data Collection</span>
+                        <span class="badge badge-primary badge-outline">Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-6 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-dark mb-4">Personal Projects</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Open-source projects demonstrating my technical capabilities and problem-solving approach.</p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
-                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-dark mb-2">Automated Data Extraction for Fairmat</h3>
-                        <p class="text-gray-600 mb-4">Academic Project | Sep - Dec 2024</p>
-                        <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
-                            <li>Built a Python/Selenium pipeline collecting 14,000+ product records</li>
-                            <li>Reduced duplicates by 45% with automated cleaning</li>
-                            <li>Created strategic market visualizations</li>
-                        </ul>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="badge badge-primary badge-outline">Python</span>
-                            <span class="badge badge-primary badge-outline">Selenium</span>
-                            <span class="badge badge-primary badge-outline">Data Cleaning</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-dark mb-2">Fashion Trend Detection</h3>
-                        <p class="text-gray-600 mb-4">Academic Project | Jan - Apr 2024</p>
-                        <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
-                            <li>Analyzed 10+ fashion features (styles, colors, materials)</li>
-                            <li>Developed ARIMA models for trend forecasting</li>
-                            <li>Created interactive dashboards with Power BI</li>
-                        </ul>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="badge badge-primary badge-outline">Time Series</span>
-                            <span class="badge badge-primary badge-outline">ARIMA</span>
-                            <span class="badge badge-primary badge-outline">Power BI</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-dark mb-2">Sentiment Analysis for PITCHBOY</h3>
-                        <p class="text-gray-600 mb-4">Academic Project | Sep - Dec 2023</p>
-                        <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
-                            <li>Analyzed AI-user interactions (video/text data)</li>
-                            <li>Implemented pre-trained NLP models</li>
-                            <li>Visualized insights to improve UX</li>
-                        </ul>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="badge badge-primary badge-outline">NLP</span>
-                            <span class="badge badge-primary badge-outline">Python</span>
-                            <span class="badge badge-primary badge-outline">Data Visualization</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300">
+                <div class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-md transition-all duration-300">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-dark mb-2">Sentiment Analysis with BERT</h3>
-                        <p class="text-gray-600 mb-4">GitHub Project | 2024</p>
+                        <p class="text-gray-600 mb-4">Implementation of a complete sentiment analysis pipeline using BERT</p>
                         <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
-                            <li>Built end-to-end sentiment analysis pipeline</li>
-                            <li>Fine-tuned BERT for custom dataset</li>
-                            <li>Deployed as reusable Python package</li>
+                            <li>Data extraction and preprocessing</li>
+                            <li>Model training and evaluation</li>
+                            <li>Deployable Python package</li>
                         </ul>
                         <div class="flex flex-wrap gap-2">
                             <span class="badge badge-primary badge-outline">BERT</span>
@@ -332,15 +442,15 @@
                     </div>
                 </div>
 
-                <!-- Project 5 -->
-                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300">
+                <!-- Project 2 -->
+                <div class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-md transition-all duration-300">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-dark mb-2">Housing Market Clustering</h3>
-                        <p class="text-gray-600 mb-4">GitHub Project | 2024</p>
+                        <p class="text-gray-600 mb-4">Analysis of real estate data using clustering algorithms</p>
                         <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
-                            <li>Segmented properties using DBSCAN/K-Means</li>
-                            <li>Analyzed price/size/location patterns</li>
-                            <li>Delivered strategic insights for real estate</li>
+                            <li>DBSCAN and K-Means implementation</li>
+                            <li>Price/size/location segmentation</li>
+                            <li>Strategic insights for stakeholders</li>
                         </ul>
                         <div class="flex flex-wrap gap-2">
                             <span class="badge badge-primary badge-outline">Clustering</span>
@@ -351,15 +461,34 @@
                     </div>
                 </div>
 
-                <!-- Project 6 -->
-                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300">
+                <!-- Project 3 -->
+                <div class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-md transition-all duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">AI Article Detector</h3>
+                        <p class="text-gray-600 mb-4">Classification system for AI-related news articles</p>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                            <li>Web scraping for article collection</li>
+                            <li>BERT embeddings generation</li>
+                            <li>Logistic regression classifier</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge badge-primary badge-outline">Web Scraping</span>
+                            <span class="badge badge-primary badge-outline">BERT</span>
+                            <span class="badge badge-primary badge-outline">Classification</span>
+                        </div>
+                        <a href="https://github.com/OusmaneMomboMombo/ai-article-detector" target="_blank" class="btn btn-sm bg-primary hover:bg-primary-dark text-white mt-4">View on GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-md transition-all duration-300">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-dark mb-2">Bitcoin Price Prediction</h3>
-                        <p class="text-gray-600 mb-4">GitHub Project | 2024</p>
+                        <p class="text-gray-600 mb-4">Time-series analysis with Facebook's Prophet</p>
                         <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
-                            <li>Time-series analysis with Prophet</li>
-                            <li>Feature engineering for crypto data</li>
-                            <li>Interactive forecasting visualizations</li>
+                            <li>Crypto market analysis</li>
+                            <li>Feature engineering</li>
+                            <li>Interactive forecasting</li>
                         </ul>
                         <div class="flex flex-wrap gap-2">
                             <span class="badge badge-primary badge-outline">Time Series</span>
@@ -369,62 +498,23 @@
                         <a href="https://github.com/OusmaneMomboMombo/prophet-bitcoin-analysis" target="_blank" class="btn btn-sm bg-primary hover:bg-primary-dark text-white mt-4">View on GitHub</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-16 px-6 bg-white">
-        <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-dark mb-12">Professional Experience</h2>
-            
-            <div class="max-w-4xl mx-auto">
-                <!-- Exp 1 -->
-                <div class="timeline-item pl-8">
-                    <h3 class="text-2xl font-bold text-dark mb-1">Data Scientist Intern</h3>
-                    <p class="text-lg text-primary mb-2">Energie Pro Export | Jul - Sep 2024 | Louveciennes, France</p>
-                    <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
-                        <li>Optimized inventory management through sales data analysis, reducing storage costs by <span class="font-semibold">10%</span></li>
-                        <li>Developed predictive restocking model in <span class="font-semibold">Python</span></li>
-                        <li>Created interactive <span class="font-semibold">Power BI/Excel</span> dashboards for real-time tracking</li>
-                        <li>Automated data cleaning, saving <span class="font-semibold">50%</span> of manual processing time</li>
-                    </ul>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="badge badge-primary badge-outline">Python</span>
-                        <span class="badge badge-primary badge-outline">Power BI</span>
-                        <span class="badge badge-primary badge-outline">Data Analysis</span>
-                    </div>
-                </div>
-
-                <!-- Exp 2 -->
-                <div class="timeline-item pl-8">
-                    <h3 class="text-2xl font-bold text-dark mb-1">Junior AI Consultant Intern</h3>
-                    <p class="text-lg text-primary mb-2">Alliance Experts | Jul - Sep 2023 | Clamart, France</p>
-                    <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
-                        <li>Designed AI project to optimize automotive claims processing</li>
-                        <li>Defined key objectives to reduce processing time by <span class="font-semibold">30%</span></li>
-                        <li>Identified functional AI requirements for virtual assistant</li>
-                    </ul>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="badge badge-primary badge-outline">AI Consulting</span>
-                        <span class="badge badge-primary badge-outline">Process Optimization</span>
-                        <span class="badge badge-primary badge-outline">SQL</span>
-                    </div>
-                </div>
-
-                <!-- Exp 3 -->
-                <div class="timeline-item pl-8">
-                    <h3 class="text-2xl font-bold text-dark mb-1">Multilingual Speech Corpus Creation</h3>
-                    <p class="text-lg text-primary mb-2">Atos | Jan - Mar 2023 | Academic Project</p>
-                    <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
-                        <li>Built French/English speech corpus with diverse speakers</li>
-                        <li>Collected and categorized <span class="font-semibold">100+ hours</span> of audio data</li>
-                        <li>Documented pipeline for future reuse</li>
-                    </ul>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="badge badge-primary badge-outline">NLP</span>
-                        <span class="badge badge-primary badge-outline">Data Collection</span>
-                        <span class="badge badge-primary badge-outline">Python</span>
+                <!-- Project 5 -->
+                <div class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-md transition-all duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">House Price Prediction</h3>
+                        <p class="text-gray-600 mb-4">Regression model for real estate valuation</p>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                            <li>Feature-based price prediction</li>
+                            <li>Machine learning implementation</li>
+                            <li>Model evaluation and optimization</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge badge-primary badge-outline">Regression</span>
+                            <span class="badge badge-primary badge-outline">Machine Learning</span>
+                            <span class="badge badge-primary badge-outline">Python</span>
+                        </div>
+                        <a href="https://github.com/OusmaneMomboMombo/house_price_prediction" target="_blank" class="btn btn-sm bg-primary hover:bg-primary-dark text-white mt-4">View on GitHub</a>
                     </div>
                 </div>
             </div>
