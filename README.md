@@ -9,10 +9,10 @@
 
 ## 🌟 Featured Skills
 **▸ Advanced Techniques:**  
-Machine Learning • Deep Learning • NLP • Time Series Analysis • Web Scraping • Data Automation • Data Processing • Data Visualization • Dimensionality Reduction • PCA • Cloud Computing • Big Data • RAG Architecture • Deployment • Excel
+Machine Learning • Deep Learning • NLP • Time Series Analysis • Web Scraping • Data Automation • Data Processing • Data Visualization • Dimensionality Reduction • PCA • Cloud Computing • Big Data • RAG Architecture • Deployment
 
 **▸ Languages & Tools:**  
-Python • SQL • R • Power BI • Pandas • Numpy • Seaborn • Matplotlib • Scikit-learn • TensorFlow • PyTorch • Transformers • Scipy • Statsmodels • BeautifulSoup • Selenium • Streamlit
+Python • SQL • R • Power BI • Excel • Git • Pandas • Numpy • Seaborn • Matplotlib • Scikit-learn • TensorFlow • PyTorch • Transformers • Scipy • Statsmodels • BeautifulSoup • Selenium • Streamlit
 
 **▸ Soft Skills:**  
 Analytical mind • Interpersonal skills • Critical thinking • Team spirit • Rigor • Autonomy • Adaptability • Flexibility • Creativity • Curiosity • Oral communication • Presentation skills • AI ethics
