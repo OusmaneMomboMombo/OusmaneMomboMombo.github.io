@@ -3,178 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIRM 9 - Strategic Dominance</title>
+    <title>FIRM 9 - EUROSIM MASTERCLASS</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@600&display=swap');
         
         body {
             margin: 0;
             padding: 0;
-            background-color: #fff;
-            color: #002868;
-            font-family: 'Oswald', sans-serif;
+            background: #0a0a2a url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==');
+            color: white;
+            font-family: 'Rajdhani', sans-serif;
             width: 210mm;
             height: 297mm;
             overflow: hidden;
+            position: relative;
         }
         
         .poster {
             width: 100%;
             height: 100%;
-            padding: 10mm;
+            padding: 8mm;
             box-sizing: border-box;
-            background: linear-gradient(to bottom, #f0f0f0 0%, #ffffff 100%);
-            border: 15px solid #002868;
+            background: linear-gradient(145deg, rgba(10,10,42,0.9) 0%, rgba(0,0,20,0.95) 100%);
+            border: 15px solid #bf0a30;
             position: relative;
-            box-shadow: 0 0 30px rgba(0,0,0,0.2);
+            box-shadow: 0 0 50px rgba(191,10,48,0.3);
         }
         
-        .stars {
+        .flag-stripes {
             position: absolute;
-            top: 5mm;
-            right: 5mm;
-            font-size: 24pt;
-            color: #bf0a30;
+            top: 0;
+            right: 0;
+            width: 30%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                to bottom,
+                #bf0a30,
+                #bf0a30 15mm,
+                white 15mm,
+                white 30mm
+            );
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
         
         .header {
             border-bottom: 3px solid #bf0a30;
-            padding-bottom: 5mm;
+            padding-bottom: 3mm;
             margin-bottom: 5mm;
             display: flex;
             justify-content: space-between;
+            align-items: flex-end;
         }
         
         h1 {
-            font-family: 'Anton', sans-serif;
-            font-size: 36pt;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 42pt;
             margin: 0;
-            color: #002868;
+            color: white;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            text-shadow: 3px 3px 0 #bf0a30;
+            letter-spacing: 2px;
+            text-shadow: 5px 5px 0 #002868;
+            line-height: 0.9;
         }
         
         h2 {
-            font-family: 'Anton', sans-serif;
-            font-size: 18pt;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20pt;
             color: #bf0a30;
-            border-left: 4px solid #002868;
-            padding-left: 5mm;
-            margin-top: 5mm;
+            margin: 3mm 0;
+            letter-spacing: 1px;
         }
         
         .grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 5mm;
-            margin-top: 5mm;
+            margin: 3mm 0;
         }
         
         .card {
-            background: white;
-            border: 2px solid #002868;
-            padding: 5mm;
-            border-radius: 0;
-            box-shadow: 5px 5px 0 #bf0a30;
+            background: rgba(255,255,255,0.1);
+            border-left: 5px solid #bf0a30;
+            padding: 4mm;
+            backdrop-filter: blur(2px);
         }
         
-        .graph-container {
-            background: white;
-            border: 2px solid #002868;
-            padding: 2mm;
-            margin-top: 5mm;
-            height: 70mm;
-            position: relative;
+        .card-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 16pt;
+            color: white;
+            margin-bottom: 2mm;
         }
         
-        .graph-placeholder {
-            width: 100%;
-            height: 100%;
-            background: repeating-linear-gradient(
-                45deg,
-                #f0f0f0,
-                #f0f0f0 10px,
-                #ffffff 10px,
-                #ffffff 20px
-            );
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #002868;
-            font-weight: bold;
-        }
-        
-        .timeline {
-            position: relative;
-            padding-left: 20mm;
-            margin: 5mm 0;
-        }
-        
-        .timeline::before {
-            content: "";
-            position: absolute;
-            left: 10mm;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: linear-gradient(to bottom, #002868, #bf0a30);
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 8mm;
-        }
-        
-        .timeline-item::before {
-            content: "";
-            position: absolute;
-            left: -15mm;
-            top: 5mm;
-            width: 10px;
-            height: 10px;
-            background: #bf0a30;
-            border: 2px solid #002868;
-        }
-        
-        .stats {
+        .main-stats {
             display: flex;
             justify-content: space-between;
-            margin-top: 5mm;
-            background: #002868;
-            padding: 3mm;
-            color: white;
+            margin: 5mm 0;
         }
         
         .stat {
             text-align: center;
             flex: 1;
-            padding: 2mm;
+            padding: 3mm;
+            background: rgba(0,40,104,0.5);
+            margin: 0 2mm;
+            border-top: 3px solid #bf0a30;
         }
         
         .stat-value {
-            font-size: 20pt;
-            font-weight: bold;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 28pt;
             color: white;
-            margin: 1mm 0;
+            line-height: 1;
         }
         
         .stat-label {
-            font-size: 9pt;
+            font-size: 10pt;
             color: #bf0a30;
-            background: white;
-            padding: 1mm;
+            text-transform: uppercase;
+        }
+        
+        .graph-container {
+            height: 60mm;
+            margin: 3mm 0;
+            display: flex;
+        }
+        
+        .graph {
+            flex: 1;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid #bf0a30;
+            position: relative;
+            overflow: hidden;
+            margin-right: 5mm;
+        }
+        
+        .graph:last-child {
+            margin-right: 0;
+        }
+        
+        .graph-title {
+            position: absolute;
+            top: 2mm;
+            left: 2mm;
+            font-size: 10pt;
+            color: #bf0a30;
+            z-index: 2;
+        }
+        
+        .graph-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #002868;
+            animation: grow 1.5s ease-out;
+        }
+        
+        @keyframes grow {
+            from { height: 0%; }
+            to { height: var(--height); }
         }
         
         .footer {
-            position: absolute;
-            bottom: 3mm;
-            right: 3mm;
+            margin-top: auto;
+            text-align: right;
             font-size: 8pt;
-            color: #002868;
-            background: white;
-            padding: 2mm;
-            border: 1px solid #bf0a30;
+            color: rgba(255,255,255,0.5);
         }
         
         .highlight {
@@ -185,104 +189,80 @@
 </head>
 <body>
     <div class="poster">
-        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="flag-stripes"></div>
         
-        <div class="header">
-            <h1>FIRM 9</h1>
-            <div style="text-align: right;">
-                <div style="font-size: 14pt; color: #002868;">EUROSIM STRATEGIC REPORT</div>
-                <div style="font-size: 10pt; color: #bf0a30;">PERIOD 0 → 4 PERFORMANCE</div>
-            </div>
-        </div>
-        
-        <h2>STRATEGIC BREAKTHROUGHS</h2>
-        <div class="grid">
-            <div class="card">
-                <strong style="color: #002868;">▲ ISO CERTIFICATION</strong><br>
-                <span class="highlight">350K€ R&D investment</span> in P2<br>
-                → Certified by P3
-            </div>
-            <div class="card">
-                <strong style="color: #002868;">⚙️ TECH UPGRADE</strong><br>
-                <span class="highlight">4 T2 workshops</span> by P4<br>
-                → 10% cost reduction
-            </div>
-            <div class="card">
-                <strong style="color: #002868;">📈 PRICING POWER</strong><br>
-                <span class="highlight">91.67€ → 99.50€</span><br>
-                +8.5% premium
-            </div>
-            <div class="card">
-                <strong style="color: #002868;">🌿 SUSTAINABILITY</strong><br>
-                Carbon score: <span class="highlight">2.21 → 5.73</span><br>
-                Eco-investments
-            </div>
-        </div>
-        
-        <h2>KEY PERFORMANCE METRICS</h2>
-        <div class="graph-container">
-            <div class="graph-placeholder">
-                [ PROFIT GRAPH: 262K€ (P0) → 397K€ (P4) ]
-            </div>
-        </div>
-        
-        <div class="grid" style="margin-top: 5mm;">
-            <div>
-                <h2>STRATEGIC TIMELINE</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <strong>P0 - FOUNDATION</strong><br>
-                        • 33 T1 workshops<br>
-                        • 12.5% market share
-                    </div>
-                    <div class="timeline-item">
-                        <strong>P2 - GAMBLE</strong><br>
-                        • 350K€ R&D blitz<br>
-                        • 1M€ short-term loan
-                    </div>
-                    <div class="timeline-item">
-                        <strong>P3 - BREAKTHROUGH</strong><br>
-                        • ISO certification active<br>
-                        • 98.00€ pricing
-                    </div>
-                    <div class="timeline-item">
-                        <strong>P4 - DOMINATION</strong><br>
-                        • 18.1% market share<br>
-                        • 397K€ net profit
-                    </div>
+        <div class="content">
+            <div class="header">
+                <h1>FIRM 9<br><span style="font-size: 24pt; color: #bf0a30;">STRATEGIC DOMINANCE</span></h1>
+                <div style="text-align: right;">
+                    <div style="font-size: 14pt; color: white;">EUROSIM PERFORMANCE</div>
+                    <div style="font-size: 10pt; color: #bf0a30;">PERIODS 0 → 4</div>
                 </div>
             </div>
-            <div>
-                <h2>MARKET POSITION</h2>
-                <div class="graph-container" style="height: 60mm;">
-                    <div class="graph-placeholder">
-                        [ MARKET SHARE GRAPH: 12.5% → 18.1% ]
-                    </div>
+            
+            <div class="main-stats">
+                <div class="stat">
+                    <div class="stat-value">+52%</div>
+                    <div class="stat-label">Profit Growth</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">18.1%</div>
+                    <div class="stat-label">Market Share</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">5.73</div>
+                    <div class="stat-label">Eco Score</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">4</div>
+                    <div class="stat-label">T2 Workshops</div>
                 </div>
             </div>
-        </div>
-        
-        <div class="stats">
-            <div class="stat">
-                <div class="stat-value">+52%</div>
-                <div class="stat-label">PROFIT GROWTH</div>
+            
+            <div class="grid">
+                <div class="card">
+                    <div class="card-title">▲ ISO CERTIFICATION</div>
+                    <div>350K€ R&D blitz in P2 → Certified by P3 → <span class="highlight">Premium pricing +8.5%</span></div>
+                </div>
+                <div class="card">
+                    <div class="card-title">⚙️ TECH REVOLUTION</div>
+                    <div>4 T2 workshops by P4 → <span class="highlight">10% cost reduction</span> vs baseline</div>
+                </div>
             </div>
-            <div class="stat">
-                <div class="stat-value">18.1%</div>
-                <div class="stat-label">MARKET SHARE</div>
+            
+            <h2>PERFORMANCE METRICS</h2>
+            <div class="graph-container">
+                <div class="graph">
+                    <div class="graph-title">NET PROFIT (K€)</div>
+                    <div class="graph-content" style="--height: 60%; background: #bf0a30;"></div>
+                    <div style="position: absolute; bottom: 10%; left: 5%; color: white;">P0: 262</div>
+                    <div style="position: absolute; bottom: 30%; left: 25%; color: white;">P2: 344</div>
+                    <div style="position: absolute; bottom: 60%; left: 45%; color: white;">P4: 397</div>
+                </div>
+                <div class="graph">
+                    <div class="graph-title">MARKET SHARE (%)</div>
+                    <div class="graph-content" style="--height: 30%; background: #002868;"></div>
+                    <div style="position: absolute; bottom: 10%; left: 5%; color: white;">P0: 12.5</div>
+                    <div style="position: absolute; bottom: 20%; left: 45%; color: white;">P4: 18.1</div>
+                </div>
             </div>
-            <div class="stat">
-                <div class="stat-value">4</div>
-                <div class="stat-label">T2 WORKSHOPS</div>
+            
+            <div class="grid">
+                <div class="card">
+                    <div class="card-title">📈 SALES STRATEGY</div>
+                    <div>Price: <span class="highlight">91.67€ → 99.50€</span><br>
+                    Advertising: <span class="highlight">86K€ → 200K€</span></div>
+                </div>
+                <div class="card">
+                    <div class="card-title">🌱 SUSTAINABILITY</div>
+                    <div>Carbon score: <span class="highlight">2.21 → 5.73</span><br>
+                    Invested <span class="highlight">50K€/period</span> in eco</div>
+                </div>
             </div>
-            <div class="stat">
-                <div class="stat-value">5.73</div>
-                <div class="stat-label">ECO SCORE</div>
+            
+            <div class="footer">
+                EDHEC MS IMPACT 2025 | FIRM 9 - USA | EUROSIM SIMULATION
             </div>
-        </div>
-        
-        <div class="footer">
-            EDHEC MS IMPACT 2025 | FIRM 9 - USA | EUROSIM SIMULATION
         </div>
     </div>
 </body>
