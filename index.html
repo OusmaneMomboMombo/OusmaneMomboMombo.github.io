@@ -3,70 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firm 9 - EUROSIM Performance Report</title>
+    <title>FIRM 9 - EUROSIM MASTERCLASS</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Roboto+Condensed:wght@400;700&display=swap');
         
         body {
             margin: 0;
             padding: 0;
-            background-color: #000;
-            color: #fff;
-            font-family: 'Roboto', sans-serif;
-            width: 210mm; /* A4 width */
-            height: 297mm; /* A4 height */
+            background-color: #fff;
+            color: #1a1a1a;
+            font-family: 'Roboto Condensed', sans-serif;
+            width: 210mm;
+            height: 297mm;
             overflow: hidden;
         }
         
         .poster {
             width: 100%;
             height: 100%;
-            padding: 15mm;
+            padding: 10mm;
             box-sizing: border-box;
-            background: linear-gradient(135deg, #0a0a2a 0%, #000 100%);
-            border: 5px solid #ffd700;
+            background: white;
+            border: 15px solid #B22234;
             position: relative;
+        }
+        
+        .flag-stripe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 40mm;
+            background-color: #3C3B6E;
+            z-index: -1;
         }
         
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 3px solid #ffd700;
-            padding-bottom: 5mm;
-            margin-bottom: 10mm;
+            margin-bottom: 5mm;
         }
         
         h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 28pt;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 32pt;
             margin: 0;
-            color: #ffd700;
+            color: white;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
         h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 18pt;
-            color: #00b4ff;
-            border-left: 4px solid #ffd700;
-            padding-left: 5mm;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 16pt;
+            color: #B22234;
+            border-bottom: 2px solid #3C3B6E;
+            padding-bottom: 2mm;
             margin-top: 8mm;
         }
         
         .grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10mm;
+            gap: 5mm;
             margin-top: 5mm;
         }
         
         .card {
-            background: rgba(10, 10, 42, 0.7);
-            border: 1px solid #00b4ff;
+            background: #F8F8F8;
+            border-left: 5px solid #3C3B6E;
             padding: 5mm;
-            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         
         .timeline {
@@ -82,12 +91,12 @@
             top: 0;
             bottom: 0;
             width: 4px;
-            background: linear-gradient(to bottom, #ffd700, #00b4ff);
+            background: linear-gradient(to bottom, #B22234, #3C3B6E);
         }
         
         .timeline-item {
             position: relative;
-            margin-bottom: 10mm;
+            margin-bottom: 8mm;
         }
         
         .timeline-item::before {
@@ -98,31 +107,67 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background: #ffd700;
-            border: 3px solid #00b4ff;
+            background: #B22234;
+            border: 3px solid #3C3B6E;
         }
         
         .stats {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3mm;
             margin-top: 10mm;
         }
         
         .stat {
             text-align: center;
-            flex: 1;
+            padding: 3mm;
+            background: #3C3B6E;
+            color: white;
+            border-radius: 5px;
         }
         
         .stat-value {
-            font-size: 24pt;
+            font-size: 20pt;
             font-weight: bold;
-            color: #ffd700;
             margin: 2mm 0;
+            color: white;
         }
         
-        .stat-label {
-            font-size: 10pt;
-            color: #00b4ff;
+        .graph-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5mm;
+            margin-top: 10mm;
+        }
+        
+        .graph {
+            background: #F8F8F8;
+            padding: 5mm;
+            border: 1px solid #ddd;
+            position: relative;
+        }
+        
+        .graph-title {
+            font-weight: bold;
+            color: #3C3B6E;
+            margin-bottom: 3mm;
+            text-align: center;
+        }
+        
+        .graph-placeholder {
+            height: 100mm;
+            background: repeating-linear-gradient(
+                45deg,
+                #eee,
+                #eee 10px,
+                #ddd 10px,
+                #ddd 20px
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-style: italic;
         }
         
         .footer {
@@ -133,91 +178,118 @@
             color: #666;
         }
         
-        /* Effets cyberpunk */
-        .glow {
-            text-shadow: 0 0 10px rgba(0, 180, 255, 0.7);
+        .highlight {
+            color: #B22234;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="poster">
+        <div class="flag-stripe"></div>
+        
         <div class="header">
-            <h1 class="glow">FIRM 9 <span style="color: #00b4ff;">// USA</span></h1>
-            <div style="text-align: right;">
-                <div style="font-size: 14pt; color: #ffd700;">EUROSIM STRATEGIC REPORT</div>
-                <div style="font-size: 10pt; color: #00b4ff;">P0 → P4 PERFORMANCE</div>
+            <h1>FIRM 9 PERFORMANCE REPORT</h1>
+            <div style="text-align: right; color: white;">
+                <div style="font-size: 14pt;">EUROSIM STRATEGIC ANALYSIS</div>
+                <div style="font-size: 10pt;">P0 → P4 | USA MARKET</div>
             </div>
         </div>
         
-        <h2>STRATEGIE DOMINANTE</h2>
+        <h2>STRATEGIC BREAKTHROUGHS</h2>
         <div class="grid">
             <div class="card">
-                <strong style="color: #ffd700;">▲ CERTIFICATION ISO</strong><br>
-                Investissement R&D massif (350k€ en P2)<br>
-                → Certification obtenue en P3
+                <strong style="color: #3C3B6E;">▲ CERTIFICATION ISO</strong><br>
+                • P2: R&D 350k€ → Certified in P3<br>
+                • Fixed cost: 10k€ + 6€/unit (T2)<br>
+                • <span class="highlight">Competitive edge vs non-certified</span>
             </div>
             <div class="card">
-                <strong style="color: #ffd700;">⚙️ TECHNOLOGIE T2</strong><br>
-                4 ateliers en P4<br>
-                → Coût unitaire -10%
+                <strong style="color: #3C3B6E;">⚙️ TECHNOLOGY UPGRADE</strong><br>
+                • P0: 33× T1 → P4: 18× T1 + 4× T2<br>
+                • Capacity: 33k → 38k units<br>
+                • <span class="highlight">Cost/unit: 54.44€ → 54.71€</span>
             </div>
             <div class="card">
-                <strong style="color: #ffd700;">📈 PRIX AGGRESSIF</strong><br>
-                91.67€ (P0) → 99.50€ (P4)<br>
-                +8.5% avec certification
+                <strong style="color: #3C3B6E;">📈 MARKET DOMINATION</strong><br>
+                • Price: 91.67€ → 99.50€ (+8.5%)<br>
+                • Market share: 12.5% → 18.1%<br>
+                • <span class="highlight">Advertising: 86k€ → 200k€</span>
             </div>
             <div class="card">
-                <strong style="color: #ffd700;">🌱 ECO-WARRIOR</strong><br>
-                Score carbone : 2.21 → 5.73<br>
-                Investissements durabilité
+                <strong style="color: #3C3B6E;">🌎 GLOBAL SUPPLY CHAIN</strong><br>
+                • Raw material contracts: 6.49€/unit (P4)<br>
+                • Spot market avoidance<br>
+                • <span class="highlight">40k units @ 8.10€ (P2)</span>
             </div>
         </div>
         
-        <h2>TIMELINE CLÉ</h2>
+        <h2>KEY TIMELINE</h2>
         <div class="timeline">
             <div class="timeline-item">
-                <strong style="color: #ffd700;">P0 - FONDATIONS</strong><br>
-                • 33 ateliers T1<br>
-                • Bénéfice net : 262k€
+                <strong style="color: #3C3B6E;">P0 - FOUNDATIONS</strong><br>
+                • 33× T1 workshops<br>
+                • Net income: 262k€<br>
+                • No certification
             </div>
             <div class="timeline-item">
-                <strong style="color: #ffd700;">P2 - GAMBLE</strong><br>
-                • R&D à 350k€<br>
-                • Dette ST 1M€
+                <strong style="color: #3C3B6E;">P2 - TRANSFORMATION</strong><br>
+                • R&D spike to 350k€<br>
+                • 1M€ short-term loan<br>
+                • Certification requested
             </div>
             <div class="timeline-item">
-                <strong style="color: #ffd700;">P3 - BREAKTHROUGH</strong><br>
-                • Certification ISO active<br>
-                • Prix à 98.00€ (+7%)
+                <strong style="color: #3C3B6E;">P3 - CERTIFIED POWER</strong><br>
+                • ISO active → Price +7%<br>
+                • 3× T2 workshops<br>
+                • Carbon score: 5.42
             </div>
             <div class="timeline-item">
-                <strong style="color: #ffd700;">P4 - DOMINATION</strong><br>
-                • 18.1% part de marché<br>
-                • Bénéfice net 397k€
+                <strong style="color: #3C3B6E;">P4 - MARKET LEADER</strong><br>
+                • 18.1% market share<br>
+                • Net income: 397k€<br>
+                • Overdraft: 1.29M€ (risk)
             </div>
         </div>
         
+        <h2>PERFORMANCE METRICS</h2>
         <div class="stats">
             <div class="stat">
                 <div class="stat-value">+52%</div>
-                <div class="stat-label">BÉNÉFICE NET</div>
+                <div>Net Profit Growth</div>
             </div>
             <div class="stat">
                 <div class="stat-value">18.1%</div>
-                <div class="stat-label">MARKET SHARE</div>
+                <div>Market Share (P4)</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">54.71€</div>
+                <div>Production Cost</div>
             </div>
             <div class="stat">
                 <div class="stat-value">5.73</div>
-                <div class="stat-label">SCORE CARBONE</div>
+                <div>Sustainability Score</div>
             </div>
-            <div class="stat">
-                <div class="stat-value">4</div>
-                <div class="stat-label">ATELIERS T2</div>
+        </div>
+        
+        <h2>STRATEGIC VISUALS</h2>
+        <div class="graph-container">
+            <div class="graph">
+                <div class="graph-title">NET INCOME EVOLUTION (P0-P4)</div>
+                <div class="graph-placeholder">
+                    [Line graph: 262k€ → 442k€ → 234k€ → 648k€ → 397k€]
+                </div>
+            </div>
+            <div class="graph">
+                <div class="graph-title">MARKET SHARE VS COMPETITORS (P4)</div>
+                <div class="graph-placeholder">
+                    [Pie chart: Firm 9 (18.1%), Local (26%), Other (55.9%)]
+                </div>
             </div>
         </div>
         
         <div class="footer">
-            EDHEC MS IMPACT 2025 | FIRM 9 - USA | EUROSIM SIMULATION
+            EDHEC MS IMPACT 2025 | FIRM 9 - USA | Data Periods P0-P4
         </div>
     </div>
 </body>
