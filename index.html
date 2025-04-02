@@ -3,43 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIRM 9 - EUROSIM DOMINATION</title>
+    <title>FIRM 9 - TOP SECRET DASHBOARD</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Rajdhani:wght@600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Rajdhani:wght@600&display=swap');
         
         :root {
-            --neon-blue: #00f3ff;
-            --neon-red: #ff073a;
-            --neon-purple: #9600ff;
-            --matrix-green: #00ff41;
-            --dark-bg: #0a0a12;
+            --us-blue: #00205B;
+            --us-red: #EF3340;
+            --us-white: #FFFFFF;
+            --neon-blue: #00F0FF;
         }
         
         body {
             margin: 0;
             padding: 0;
-            background-color: var(--dark-bg);
-            color: white;
+            background-color: #000;
+            background-image: 
+                radial-gradient(circle at 75% 30%, rgba(0, 32, 91, 0.8) 0%, transparent 40%),
+                radial-gradient(circle at 25% 70%, rgba(239, 51, 64, 0.6) 0%, transparent 45%),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 100%);
+            color: var(--us-white);
             font-family: 'Rajdhani', sans-serif;
             width: 210mm;
             height: 297mm;
             overflow: hidden;
             position: relative;
-        }
-        
-        /* Effets futuristes */
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(0, 243, 255, 0.15) 0%, transparent 30%),
-                radial-gradient(circle at 80% 70%, rgba(255, 7, 58, 0.15) 0%, transparent 30%);
-            pointer-events: none;
-            z-index: -1;
         }
         
         .grid-lines {
@@ -49,10 +37,10 @@
             width: 100%;
             height: 100%;
             background-image: 
-                linear-gradient(to right, rgba(0, 243, 255, 0.05) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(0, 243, 255, 0.05) 1px, transparent 1px);
+                linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
             background-size: 20px 20px;
-            z-index: -1;
+            z-index: 0;
         }
         
         .poster {
@@ -61,63 +49,77 @@
             padding: 15mm;
             box-sizing: border-box;
             position: relative;
-            border: 5px solid var(--neon-blue);
-            box-shadow: 0 0 30px rgba(0, 243, 255, 0.3);
+            z-index: 1;
+            border: 1px solid var(--neon-blue);
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
             overflow: hidden;
         }
         
-        .corner-decoration {
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10mm;
+            border-bottom: 3px solid var(--us-red);
+            margin-bottom: 10mm;
+            position: relative;
+        }
+        
+        .header::after {
+            content: "";
             position: absolute;
-            width: 50px;
-            height: 50px;
-            border: 3px solid var(--neon-red);
-        }
-        
-        .corner-tl {
-            top: 10mm;
-            left: 10mm;
-            border-right: none;
-            border-bottom: none;
-        }
-        
-        .corner-tr {
-            top: 10mm;
-            right: 10mm;
-            border-left: none;
-            border-bottom: none;
-        }
-        
-        .corner-bl {
-            bottom: 10mm;
-            left: 10mm;
-            border-right: none;
-            border-top: none;
-        }
-        
-        .corner-br {
-            bottom: 10mm;
-            right: 10mm;
-            border-left: none;
-            border-top: none;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--neon-blue), transparent);
         }
         
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 42pt;
+            font-size: 36pt;
             margin: 0;
-            color: var(--neon-blue);
+            color: var(--us-white);
             text-transform: uppercase;
             letter-spacing: 3px;
-            text-shadow: 0 0 10px var(--neon-blue);
-            text-align: center;
-            margin-bottom: 5mm;
+            text-shadow: 0 0 15px var(--neon-blue);
+        }
+        
+        .us-flag {
+            display: flex;
+        }
+        
+        .flag-stripe {
+            width: 10px;
+            height: 30px;
+            margin-right: 3px;
+        }
+        
+        .red { background-color: var(--us-red); }
+        .white { background-color: var(--us-white); }
+        .blue { 
+            background-color: var(--us-blue);
+            width: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stars {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            color: var(--us-white);
+            font-size: 8pt;
+            letter-spacing: 1px;
+            line-height: 1;
         }
         
         h2 {
             font-family: 'Orbitron', sans-serif;
             font-size: 18pt;
-            color: var(--neon-red);
-            margin-top: 8mm;
+            color: var(--neon-blue);
+            margin-top: 15mm;
+            margin-bottom: 5mm;
             letter-spacing: 2px;
             position: relative;
             display: inline-block;
@@ -126,81 +128,119 @@
         h2::after {
             content: "";
             position: absolute;
-            bottom: -3px;
+            bottom: -5px;
             left: 0;
             width: 100%;
             height: 2px;
-            background: linear-gradient(to right, var(--neon-red), transparent);
+            background: linear-gradient(to right, var(--us-red), transparent);
         }
         
-        .stats-grid {
+        .grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 5mm;
+            grid-template-columns: 1fr 1fr;
+            gap: 10mm;
             margin-top: 5mm;
         }
         
-        .stat-card {
-            background: rgba(10, 10, 30, 0.7);
+        .card {
+            background: rgba(0, 32, 91, 0.3);
             border: 1px solid var(--neon-blue);
-            border-radius: 5px;
-            padding: 5mm;
-            text-align: center;
-            box-shadow: 0 0 15px rgba(0, 243, 255, 0.1);
-            transition: transform 0.3s;
+            padding: 8mm;
+            border-radius: 3px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
+            transition: all 0.3s;
         }
         
-        .stat-card:hover {
+        .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+            box-shadow: 0 5px 25px rgba(0, 240, 255, 0.3);
         }
         
-        .stat-value {
-            font-size: 24pt;
-            font-weight: bold;
-            color: var(--neon-blue);
-            margin: 2mm 0;
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 240, 255, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .card h3 {
             font-family: 'Orbitron', sans-serif;
+            color: var(--us-white);
+            margin-top: 0;
+            font-size: 14pt;
+            border-bottom: 1px solid var(--us-red);
+            padding-bottom: 2mm;
+            display: inline-block;
         }
         
-        .stat-label {
-            font-size: 10pt;
-            color: var(--neon-red);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .card p {
+            margin: 2mm 0;
+            line-height: 1.4;
+        }
+        
+        .highlight {
+            color: var(--neon-blue);
+            font-weight: bold;
         }
         
         .graph-container {
-            margin-top: 8mm;
-            position: relative;
-            height: 80mm;
-            background: rgba(0, 0, 20, 0.5);
-            border: 1px solid var(--neon-purple);
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--neon-blue);
             padding: 3mm;
+            margin-top: 5mm;
+            height: 70mm;
+            position: relative;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
         }
         
         .graph {
             width: 100%;
             height: 100%;
+            background: rgba(0, 32, 91, 0.2);
             position: relative;
+            overflow: hidden;
         }
         
-        .graph-bars {
-            display: flex;
+        .graph::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
             height: 100%;
+            background: 
+                linear-gradient(to right, transparent 95%, rgba(0, 240, 255, 0.1) 100%),
+                linear-gradient(to bottom, transparent 95%, rgba(0, 240, 255, 0.1) 100%);
+        }
+        
+        .profit-graph {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
             align-items: flex-end;
-            justify-content: space-around;
-            padding: 0 10mm;
         }
         
         .bar {
-            width: 20mm;
-            background: linear-gradient(to top, var(--neon-blue), var(--neon-purple));
+            flex: 1;
+            background: linear-gradient(to top, var(--us-red), #FF6B7F);
+            margin: 0 2px;
             position: relative;
-            border-top-left-radius: 3px;
-            border-top-right-radius: 3px;
-            box-shadow: 0 0 10px rgba(150, 0, 255, 0.5);
-            transition: height 0.5s ease-out;
+            transition: all 0.5s;
+            animation: rise 1s ease-out forwards;
+        }
+        
+        @keyframes rise {
+            from { height: 0; }
+            to { height: var(--h); }
         }
         
         .bar::after {
@@ -209,61 +249,107 @@
             top: -25px;
             left: 50%;
             transform: translateX(-50%);
-            color: white;
-            font-weight: bold;
-            font-size: 10pt;
+            color: var(--us-white);
+            font-size: 8pt;
         }
         
         .bar-label {
             position: absolute;
-            bottom: -30px;
+            bottom: -20px;
             left: 50%;
             transform: translateX(-50%);
-            color: var(--neon-red);
-            font-size: 10pt;
-            text-transform: uppercase;
-        }
-        
-        .timeline {
-            position: relative;
-            padding-left: 20mm;
-            margin: 10mm 0;
-        }
-        
-        .timeline::before {
-            content: "";
-            position: absolute;
-            left: 9mm;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, var(--neon-blue), var(--neon-red));
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 10mm;
-            padding-left: 10mm;
-        }
-        
-        .timeline-item::before {
-            content: "";
-            position: absolute;
-            left: 5mm;
-            top: 5mm;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--neon-red);
-            border: 2px solid var(--neon-blue);
-            box-shadow: 0 0 10px var(--neon-red);
-        }
-        
-        .timeline-date {
-            font-weight: bold;
             color: var(--neon-blue);
-            margin-bottom: 2mm;
+            font-size: 8pt;
+        }
+        
+        .market-share-graph {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: conic-gradient(
+                var(--us-red) 0% 18%,
+                var(--us-blue) 18% 36%,
+                #444 36% 100%
+            );
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+        }
+        
+        .market-share-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--neon-blue);
             font-family: 'Orbitron', sans-serif;
+            font-size: 14pt;
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10mm;
+            background: rgba(0, 32, 91, 0.5);
+            border: 1px solid var(--neon-blue);
+            padding: 5mm;
+            position: relative;
+        }
+        
+        .stats::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent 0%, rgba(0, 240, 255, 0.05) 100%);
+            pointer-events: none;
+        }
+        
+        .stat {
+            text-align: center;
+            flex: 1;
+            padding: 0 5mm;
+            position: relative;
+        }
+        
+        .stat::after {
+            content: "";
+            position: absolute;
+            top: 10%;
+            right: 0;
+            width: 1px;
+            height: 80%;
+            background: linear-gradient(to bottom, transparent, var(--neon-blue), transparent);
+        }
+        
+        .stat:last-child::after {
+            display: none;
+        }
+        
+        .stat-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 24pt;
+            color: var(--neon-blue);
+            margin: 2mm 0;
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+        }
+        
+        .stat-label {
+            font-size: 10pt;
+            color: var(--us-white);
+            text-transform: uppercase;
             letter-spacing: 1px;
         }
         
@@ -272,102 +358,142 @@
             bottom: 5mm;
             right: 5mm;
             font-size: 8pt;
-            color: rgba(255, 255, 255, 0.5);
+            color: var(--neon-blue);
+            opacity: 0.7;
             letter-spacing: 1px;
         }
         
-        .glow {
-            animation: glow 2s ease-in-out infinite alternate;
+        .scanline {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                transparent 0%,
+                rgba(0, 240, 255, 0.05) 50%,
+                transparent 100%
+            );
+            animation: scan 8s linear infinite;
+            pointer-events: none;
+            z-index: 2;
         }
         
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 5px var(--neon-blue);
-            }
-            to {
-                text-shadow: 0 0 15px var(--neon-blue), 0 0 20px var(--neon-purple);
-            }
+        @keyframes scan {
+            0% { top: -100%; }
+            100% { top: 100%; }
+        }
+        
+        .glitch {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="1" y="0" fill="rgba(0,240,255,0.1)"/><rect width="100" height="1" y="2" fill="rgba(0,240,255,0.1)"/><rect width="100" height="1" y="4" fill="rgba(0,240,255,0.1)"/></svg>');
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: 3;
         }
     </style>
 </head>
 <body>
     <div class="grid-lines"></div>
+    <div class="scanline"></div>
+    <div class="glitch"></div>
+    
     <div class="poster">
-        <div class="corner-decoration corner-tl"></div>
-        <div class="corner-decoration corner-tr"></div>
-        <div class="corner-decoration corner-bl"></div>
-        <div class="corner-decoration corner-br"></div>
-        
-        <h1 class="glow">FIRM 9 DOMINATION</h1>
-        
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-value">+52%</div>
-                <div class="stat-label">Profit Growth</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-value">18.1%</div>
-                <div class="stat-label">Market Share</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-value">4</div>
-                <div class="stat-label">T2 Workshops</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-value">5.73</div>
-                <div class="stat-label">Eco Score</div>
-            </div>
-        </div>
-        
-        <h2>PERFORMANCE METRICS</h2>
-        <div class="graph-container">
-            <div class="graph">
-                <div class="graph-bars">
-                    <div class="bar" style="height: 40%;" data-value="262K€">
-                        <div class="bar-label">P0</div>
-                    </div>
-                    <div class="bar" style="height: 55%;" data-value="313K€">
-                        <div class="bar-label">P1</div>
-                    </div>
-                    <div class="bar" style="height: 65%;" data-value="344K€">
-                        <div class="bar-label">P2</div>
-                    </div>
-                    <div class="bar" style="height: 75%;" data-value="581K€">
-                        <div class="bar-label">P3</div>
-                    </div>
-                    <div class="bar" style="height: 100%;" data-value="397K€">
-                        <div class="bar-label">P4</div>
-                    </div>
+        <div class="header">
+            <h1>FIRM 9 STRATEGIC BRIEF</h1>
+            <div class="us-flag">
+                <div class="flag-stripe red"></div>
+                <div class="flag-stripe white"></div>
+                <div class="flag-stripe red"></div>
+                <div class="flag-stripe white"></div>
+                <div class="flag-stripe blue">
+                    <div class="stars">★ ★ ★ ★ ★</div>
                 </div>
             </div>
         </div>
         
-        <h2>STRATEGIC TIMELINE</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-date">P0 - FOUNDATION</div>
-                • 33 T1 workshops established<br>
-                • 12.5% market penetration
+        <h2>OPERATION EUROSIM</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>▲ ISO CERTIFICATION</h3>
+                <p>Executed <span class="highlight">350K€ R&D blitz</span> in P2 resulting in certification by P3. Quality index increased by <span class="highlight">158%</span>.</p>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-date">P2 - POWER MOVE</div>
-                • 350K€ R&D blitz<br>
-                • 1M€ short-term gamble
+            <div class="card">
+                <h3>⚙️ TECH OVERHAUL</h3>
+                <p>Deployed <span class="highlight">4 T2 workshops</span> by P4. Production costs reduced by <span class="highlight">10.2%</span> despite inflation.</p>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-date">P3 - BREAKTHROUGH</div>
-                • ISO certification achieved<br>
-                • Premium pricing at 98.00€
+            <div class="card">
+                <h3>📈 PRICING POWER</h3>
+                <p>Implemented <span class="highlight">price premium strategy</span> from 91.67€ (P0) to 99.50€ (P4). Market accepted +8.5% increase.</p>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-date">P4 - DOMINATION</div>
-                • 18.1% market control<br>
-                • 397K€ net profit secured
+            <div class="card">
+                <h3>🌿 ECO-WARFARE</h3>
+                <p>Carbon score improved from <span class="highlight">2.21 to 5.73</span>. Sustainability investments totaled <span class="highlight">165K€</span> across P2-P4.</p>
+            </div>
+        </div>
+        
+        <h2>PROFIT OPERATION</h2>
+        <div class="graph-container">
+            <div class="graph">
+                <div class="profit-graph">
+                    <div class="bar" style="--h: 30%;" data-value="262K€"></div>
+                    <div class="bar" style="--h: 45%;" data-value="313K€"></div>
+                    <div class="bar" style="--h: 55%;" data-value="344K€"></div>
+                    <div class="bar" style="--h: 65%;" data-value="395K€"></div>
+                    <div class="bar" style="--h: 75%;" data-value="397K€"></div>
+                    <div class="bar-label">P0</div>
+                    <div class="bar-label">P1</div>
+                    <div class="bar-label">P2</div>
+                    <div class="bar-label">P3</div>
+                    <div class="bar-label">P4</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid" style="margin-top: 10mm;">
+            <div>
+                <h2>MARKET PENETRATION</h2>
+                <div class="graph-container" style="height: 60mm;">
+                    <div class="graph">
+                        <div class="market-share-graph"></div>
+                        <div class="market-share-center">18.1%</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>KEY METRICS</h2>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-value">+52%</div>
+                        <div class="stat-label">PROFIT GROWTH</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">18.1%</div>
+                        <div class="stat-label">MARKET SHARE</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">4</div>
+                        <div class="stat-label">T2 WORKSHOPS</div>
+                    </div>
+                </div>
+                
+                <h2 style="margin-top: 10mm;">PHASE TIMELINE</h2>
+                <div style="background: rgba(0, 32, 91, 0.3); padding: 5mm; border: 1px solid var(--neon-blue); margin-top: 5mm;">
+                    <p><span class="highlight">P0-P1:</span> Foundation phase - Basic production</p>
+                    <p><span class="highlight">P2:</span> High-risk R&D investment</p>
+                    <p><span class="highlight">P3:</span> Certification achieved</p>
+                    <p><span class="highlight">P4:</span> Market dominance</p>
+                </div>
             </div>
         </div>
         
         <div class="footer">
-            EDHEC MS IMPACT 2025 | EUROSIM SIMULATION | FIRM 9 - USA
+            TOP SECRET // EUROSIM SIMULATION // EDHEC MS IMPACT 2025
         </div>
     </div>
 </body>
