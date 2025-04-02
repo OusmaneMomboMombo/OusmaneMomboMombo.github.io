@@ -3,293 +3,342 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIRM 9 - EUROSIM MASTERCLASS</title>
+    <title>FIRM 9 - EUROSIM Strategic Report</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Roboto+Condensed:wght@400;700&display=swap');
         
         body {
             margin: 0;
             padding: 0;
-            background-color: #fff;
-            color: #1a1a1a;
+            background-color: #f0f0f0;
             font-family: 'Roboto Condensed', sans-serif;
-            width: 210mm;
-            height: 297mm;
+            width: 210mm; /* A4 width */
+            height: 297mm; /* A4 height */
             overflow: hidden;
         }
         
         .poster {
             width: 100%;
             height: 100%;
-            padding: 10mm;
-            box-sizing: border-box;
             background: white;
-            border: 15px solid #B22234;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        /* Drapeau US en bandeau */
+        .flag-stripes {
+            height: 30px;
+            background: repeating-linear-gradient(
+                180deg,
+                #B22234,
+                #B22234 15px,
+                white 15px,
+                white 30px
+            );
+        }
+        
+        .flag-stars {
+            height: 90px;
+            background-color: #3C3B6E;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: relative;
         }
         
-        .flag-stripe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 40mm;
-            background-color: #3C3B6E;
-            z-index: -1;
-        }
-        
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 5mm;
-        }
-        
-        h1 {
-            font-family: 'Libre Baskerville', serif;
-            font-size: 32pt;
-            margin: 0;
+        .flag-stars::after {
+            content: "★ ★ ★ ★ ★";
             color: white;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 24px;
+            letter-spacing: 15px;
         }
         
-        h2 {
+        .title {
+            text-align: center;
+            padding: 15px 0;
+            background: linear-gradient(to right, #3C3B6E, #B22234);
+            color: white;
             font-family: 'Libre Baskerville', serif;
-            font-size: 16pt;
-            color: #B22234;
-            border-bottom: 2px solid #3C3B6E;
-            padding-bottom: 2mm;
-            margin-top: 8mm;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #3C3B6E;
+            font-size: 14px;
+            margin-top: -10px;
+            font-weight: bold;
+        }
+        
+        .content {
+            padding: 15px;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+            border-left: 4px solid #B22234;
+            padding-left: 10px;
+        }
+        
+        .section-title {
+            color: #3C3B6E;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
         }
         
         .grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 5mm;
-            margin-top: 5mm;
+            gap: 15px;
+            margin-top: 15px;
         }
         
         .card {
-            background: #F8F8F8;
-            border-left: 5px solid #3C3B6E;
-            padding: 5mm;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .card-title {
+            color: #B22234;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        
+        .chart {
+            height: 150px;
+            background: #f9f9f9;
+            margin-top: 10px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+        
+        .chart::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20%;
+            background: #3C3B6E;
+            z-index: 1;
+        }
+        
+        .chart::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            right: 0;
+            height: 50%;
+            background: #B22234;
+            z-index: 2;
         }
         
         .timeline {
             position: relative;
-            padding-left: 20mm;
-            margin: 10mm 0;
+            padding-left: 30px;
+            margin: 20px 0;
         }
         
         .timeline::before {
             content: "";
             position: absolute;
-            left: 5mm;
+            left: 10px;
             top: 0;
             bottom: 0;
-            width: 4px;
-            background: linear-gradient(to bottom, #B22234, #3C3B6E);
+            width: 3px;
+            background: linear-gradient(to bottom, #3C3B6E, #B22234);
         }
         
         .timeline-item {
             position: relative;
-            margin-bottom: 8mm;
+            margin-bottom: 20px;
         }
         
         .timeline-item::before {
             content: "";
             position: absolute;
-            left: -23mm;
-            top: 5mm;
-            width: 12px;
-            height: 12px;
+            left: -25px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
             border-radius: 50%;
             background: #B22234;
             border: 3px solid #3C3B6E;
         }
         
+        .timeline-date {
+            font-weight: bold;
+            color: #3C3B6E;
+        }
+        
         .stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 3mm;
-            margin-top: 10mm;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            flex-wrap: wrap;
         }
         
         .stat {
             text-align: center;
-            padding: 3mm;
-            background: #3C3B6E;
-            color: white;
+            flex: 1;
+            min-width: 100px;
+            margin: 5px;
+            padding: 10px;
+            background: #f9f9f9;
             border-radius: 5px;
         }
         
         .stat-value {
-            font-size: 20pt;
+            font-size: 24px;
             font-weight: bold;
-            margin: 2mm 0;
-            color: white;
+            color: #B22234;
+            margin: 5px 0;
         }
         
-        .graph-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5mm;
-            margin-top: 10mm;
-        }
-        
-        .graph {
-            background: #F8F8F8;
-            padding: 5mm;
-            border: 1px solid #ddd;
-            position: relative;
-        }
-        
-        .graph-title {
-            font-weight: bold;
+        .stat-label {
+            font-size: 10px;
             color: #3C3B6E;
-            margin-bottom: 3mm;
-            text-align: center;
-        }
-        
-        .graph-placeholder {
-            height: 100mm;
-            background: repeating-linear-gradient(
-                45deg,
-                #eee,
-                #eee 10px,
-                #ddd 10px,
-                #ddd 20px
-            );
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-style: italic;
+            text-transform: uppercase;
         }
         
         .footer {
-            position: absolute;
-            bottom: 5mm;
-            right: 5mm;
-            font-size: 8pt;
+            text-align: center;
+            font-size: 10px;
             color: #666;
+            margin-top: 20px;
+            padding: 10px;
+            border-top: 1px solid #ddd;
         }
         
-        .highlight {
-            color: #B22234;
-            font-weight: bold;
+        /* Graphique custom */
+        .bar-chart {
+            display: flex;
+            height: 150px;
+            align-items: flex-end;
+            justify-content: space-around;
+            padding: 0 10px;
+        }
+        
+        .bar {
+            width: 30px;
+            background: linear-gradient(to top, #3C3B6E, #B22234);
+            margin: 0 5px;
+            position: relative;
+            border-radius: 3px 3px 0 0;
+        }
+        
+        .bar-label {
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 10px;
+            color: #3C3B6E;
         }
     </style>
 </head>
 <body>
     <div class="poster">
-        <div class="flag-stripe"></div>
+        <div class="flag-stripes"></div>
+        <div class="flag-stars"></div>
         
-        <div class="header">
-            <h1>FIRM 9 PERFORMANCE REPORT</h1>
-            <div style="text-align: right; color: white;">
-                <div style="font-size: 14pt;">EUROSIM STRATEGIC ANALYSIS</div>
-                <div style="font-size: 10pt;">P0 → P4 | USA MARKET</div>
-            </div>
-        </div>
+        <div class="title">FIRM 9 - USA</div>
+        <div class="subtitle">EUROSIM STRATEGIC REPORT | P0-P4 PERFORMANCE</div>
         
-        <h2>STRATEGIC BREAKTHROUGHS</h2>
-        <div class="grid">
-            <div class="card">
-                <strong style="color: #3C3B6E;">▲ CERTIFICATION ISO</strong><br>
-                • P2: R&D 350k€ → Certified in P3<br>
-                • Fixed cost: 10k€ + 6€/unit (T2)<br>
-                • <span class="highlight">Competitive edge vs non-certified</span>
-            </div>
-            <div class="card">
-                <strong style="color: #3C3B6E;">⚙️ TECHNOLOGY UPGRADE</strong><br>
-                • P0: 33× T1 → P4: 18× T1 + 4× T2<br>
-                • Capacity: 33k → 38k units<br>
-                • <span class="highlight">Cost/unit: 54.44€ → 54.71€</span>
-            </div>
-            <div class="card">
-                <strong style="color: #3C3B6E;">📈 MARKET DOMINATION</strong><br>
-                • Price: 91.67€ → 99.50€ (+8.5%)<br>
-                • Market share: 12.5% → 18.1%<br>
-                • <span class="highlight">Advertising: 86k€ → 200k€</span>
-            </div>
-            <div class="card">
-                <strong style="color: #3C3B6E;">🌎 GLOBAL SUPPLY CHAIN</strong><br>
-                • Raw material contracts: 6.49€/unit (P4)<br>
-                • Spot market avoidance<br>
-                • <span class="highlight">40k units @ 8.10€ (P2)</span>
-            </div>
-        </div>
-        
-        <h2>KEY TIMELINE</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <strong style="color: #3C3B6E;">P0 - FOUNDATIONS</strong><br>
-                • 33× T1 workshops<br>
-                • Net income: 262k€<br>
-                • No certification
-            </div>
-            <div class="timeline-item">
-                <strong style="color: #3C3B6E;">P2 - TRANSFORMATION</strong><br>
-                • R&D spike to 350k€<br>
-                • 1M€ short-term loan<br>
-                • Certification requested
-            </div>
-            <div class="timeline-item">
-                <strong style="color: #3C3B6E;">P3 - CERTIFIED POWER</strong><br>
-                • ISO active → Price +7%<br>
-                • 3× T2 workshops<br>
-                • Carbon score: 5.42
-            </div>
-            <div class="timeline-item">
-                <strong style="color: #3C3B6E;">P4 - MARKET LEADER</strong><br>
-                • 18.1% market share<br>
-                • Net income: 397k€<br>
-                • Overdraft: 1.29M€ (risk)
-            </div>
-        </div>
-        
-        <h2>PERFORMANCE METRICS</h2>
-        <div class="stats">
-            <div class="stat">
-                <div class="stat-value">+52%</div>
-                <div>Net Profit Growth</div>
-            </div>
-            <div class="stat">
-                <div class="stat-value">18.1%</div>
-                <div>Market Share (P4)</div>
-            </div>
-            <div class="stat">
-                <div class="stat-value">54.71€</div>
-                <div>Production Cost</div>
-            </div>
-            <div class="stat">
-                <div class="stat-value">5.73</div>
-                <div>Sustainability Score</div>
-            </div>
-        </div>
-        
-        <h2>STRATEGIC VISUALS</h2>
-        <div class="graph-container">
-            <div class="graph">
-                <div class="graph-title">NET INCOME EVOLUTION (P0-P4)</div>
-                <div class="graph-placeholder">
-                    [Line graph: 262k€ → 442k€ → 234k€ → 648k€ → 397k€]
+        <div class="content">
+            <div class="section">
+                <div class="section-title">STRATEGIC BREAKTHROUGH</div>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-title">▲ CERTIFICATION ISO</div>
+                        <div>P2: 350k€ R&D → Certified in P3</div>
+                        <div class="chart"></div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">⚙️ TECHNOLOGY UPGRADE</div>
+                        <div>4 T2 Workshops in P4 (-10% costs)</div>
+                        <div class="chart"></div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">📈 PRICING POWER</div>
+                        <div>91.67€ (P0) → 99.50€ (P4)</div>
+                        <div class="bar-chart">
+                            <div class="bar" style="height: 60%;"><div class="bar-label">P0</div></div>
+                            <div class="bar" style="height: 70%;"><div class="bar-label">P2</div></div>
+                            <div class="bar" style="height: 85%;"><div class="bar-label">P4</div></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">🌱 SUSTAINABILITY</div>
+                        <div>Carbon Score: 2.21 → 5.73</div>
+                        <div class="chart"></div>
+                    </div>
                 </div>
             </div>
-            <div class="graph">
-                <div class="graph-title">MARKET SHARE VS COMPETITORS (P4)</div>
-                <div class="graph-placeholder">
-                    [Pie chart: Firm 9 (18.1%), Local (26%), Other (55.9%)]
+            
+            <div class="section">
+                <div class="section-title">KEY TIMELINE</div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">P0 - FOUNDATION</div>
+                        <div>• 33 T1 Workshops</div>
+                        <div>• Net Profit: 262k€</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">P2 - GAMBLE</div>
+                        <div>• 350k€ R&D Investment</div>
+                        <div>• Short-term Loan: 1M€</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">P3 - BREAKTHROUGH</div>
+                        <div>• ISO Certification Active</div>
+                        <div>• Price: 98.00€ (+7%)</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">P4 - DOMINATION</div>
+                        <div>• 18.1% Market Share</div>
+                        <div>• Net Profit: 397k€</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">PERFORMANCE METRICS</div>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-value">+52%</div>
+                        <div class="stat-label">Net Profit</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">18.1%</div>
+                        <div class="stat-label">Market Share</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">5.73</div>
+                        <div class="stat-label">Eco Score</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">4</div>
+                        <div class="stat-label">T2 Workshops</div>
+                    </div>
                 </div>
             </div>
         </div>
         
         <div class="footer">
-            EDHEC MS IMPACT 2025 | FIRM 9 - USA | Data Periods P0-P4
+            EDHEC MS IMPACT 2025 | FIRM 9 - USA | EUROSIM SIMULATION
         </div>
     </div>
 </body>
